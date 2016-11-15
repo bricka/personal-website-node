@@ -16,34 +16,51 @@ div.body {
   padding: 10px 30px;
 }
 
-div.header {
+div.title {
   background : #999;
   color: #fcc915;
   text-align : center;
+
+  h1 {
+    font-size : 40px;
+    margin-top : 0;
+    margin-bottom : 0;
+  }
 }
 
-div.header h1 {
-  font-size : 40px;
-  margin-top : 0;
-  margin-bottom : 0;
-}
-
-div.menu {
+div.header {
   background : #D9D9D9;
-  display: flex;
-  justify-content: center;
-  padding: 5px;
-}
 
-div.menu a {
-  color: #00F;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #D9D9D9 #909090 #909090 #D9D9D9;
-  text-align: center;
-  text-decoration: none;
-  margin: 0px 5px 0px 10px;
-  padding: 2px;
+  div.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+
+    a {
+      color: #00F;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #D9D9D9 #909090 #909090 #D9D9D9;
+      text-align: center;
+      text-decoration: none;
+      margin: 0px 5px 0px 10px;
+      padding: 2px;
+    }
+  }
+
+  div.language-selector {
+    padding: 5px;
+    text-align: center;
+
+    .language-options {
+      text-transform: uppercase;
+
+      .current-language {
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 div.menu a:hover {
