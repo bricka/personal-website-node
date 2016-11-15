@@ -10,13 +10,14 @@ const router = (
     <Router history={hashHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={Home}/>
-            <Route path="resume" component={Resume}/>
-            <Route path="courses" component={Courses}/>
-            <Route path="projects" component={Projects}/>
-            <Route path="contact" component={Contact}/>
         </Route>
     </Router>
 );
+
+            // <Route path="resume" component={Resume}/>
+            // <Route path="courses" component={Courses}/>
+            // <Route path="projects" component={Projects}/>
+            // <Route path="contact" component={Contact}/>
 
 ReactDOM.render(
   router,
