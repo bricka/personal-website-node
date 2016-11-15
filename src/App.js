@@ -6,13 +6,19 @@ import { IntlProvider } from 'react-intl';
 
 import { compose, withState } from 'recompose';
 
+import coursesDe from './courses.de';
+
 const messages = {
   de: {
     'menu.home': 'Startseit',
     'menu.resume': 'Lebenslauf',
     'menu.courses': 'Klassen',
     'menu.projects': 'Projekten',
-    'menu.contact': 'Kontakt'
+    'menu.contact': 'Kontakt',
+
+    'resume.my-resume.en': 'Mein Lebenslauf (Amerikan)',
+
+    ...coursesDe
   }
 };
 

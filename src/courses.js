@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
+import { FormattedMessage } from 'react-intl';
+
 class Semester extends Component {
   static propTypes = {
     children: PropTypes.node,
@@ -24,8 +26,9 @@ class Semester extends Component {
 
 class Class extends Component {
   static propTypes = {
+    defaultName: PropTypes.string.isRequired,
     masters: PropTypes.bool,
-    name: PropTypes.string.isRequired,
+    nameId: PropTypes.string.isRequired,
     phd: PropTypes.bool,
     teacher: PropTypes.string
   };
@@ -33,7 +36,14 @@ class Class extends Component {
   render = () => (
     <li>
       <span className="class-name">
-        {this.props.name}
+        {this.props.nameId ? (
+          <FormattedMessage
+            id={this.props.nameId}
+            defaultMessage={this.props.defaultName}
+          />
+        ) : (
+          this.props.defaultName
+        )}
         {this.props.masters && '*'}
         {this.props.phd && '†'}
       </span>
@@ -53,13 +63,15 @@ export default function Courses() {
 
       <Semester name="Spring 2011">
         <Class
+          defaultName="Fundamentals of Artificial Intelligance"
           masters={true}
-          name="Fundamentals of Artificial Intelligance"
+          nameId="courses.fundamentals-of-ai"
           teacher="Carole Hafner"
         />
         <Class
+          defaultName="Network Security"
           masters={true}
-          name="Network Security"
+          nameId="courses.network-security"
           teacher="Ravi Sundaram"
         />
       </Semester>
@@ -71,32 +83,38 @@ export default function Courses() {
 
       <Semester name="Summer 1 2010">
         <Class
+          defaultName="Directed Study (DMTCP/OpenMPI)"
           masters={true}
-          name="Directed Study (DMTCP/OpenMPI)"
+          nameId="courses.directed-study-dmtcp-openmpi"
           teacher="Gene Cooperman"
         />
         <Class
-          name="Mobile Application Development"
+          defaultName="Mobile Application Development"
+          nameId="courses.mobile-application-development"
           teacher="Pong Choa"
         />
       </Semester>
 
       <Semester name="Spring 2010">
         <Class
-          name="Group Theory"
+          defaultName="Group Theory"
+          nameId="courses.group-theory"
           teacher="Anthony Iarrobino"
         />
         <Class
-          name="Computers and Society"
+          defaultName="Computers and Society"
+          nameId="courses.computers-and-society"
           teacher="Judith Perrolle"
         />
         <Class
-          name="Intensive Operating Systems"
+          defaultName="Intensive Operating Systems"
+          nameId="courses.intensive-operating-systems"
           phd={true}
           teacher="Peter Desnoyers"
         />
         <Class
-          name="Software Development"
+          defaultName="Software Development"
+          nameId="courses.software-development"
           teacher="William Clinger"
         />
       </Semester>
@@ -105,40 +123,44 @@ export default function Courses() {
         comment="Studying abroad at J.F. Oberlin University in Machida, Tokyo, Japan"
         name="Fall 2009"
       >
-        <Class name="本語 II-B (Japanese II-B)" />
-        <Class name="日本の神話学 (Japanese Mythology)" />
-        <Class name="経験の日本語 (Experiential Japanese)" />
-        <Class name="漢字 I (Kanji I)" />
+        <Class defaultName="本語 II-B (Japanese II-B)" />
+        <Class defaultName="日本の神話学 (Japanese Mythology)" />
+        <Class defaultName="経験の日本語 (Experiential Japanese)" />
+        <Class defaultName="漢字 I (Kanji I)" />
       </Semester>
 
       <Semester name="Summer 1 2009">
         <Class
-          name="Physics 2 for Engineers"
+          defaultName="Physics 2 for Engineers"
+          nameId="courses.physics-2"
           teacher="Henry Smith"
         />
         <Class
-          name="Public Policy and Administration"
+          defaultName="Public Policy and Administration"
+          nameId="courses.public-policy"
           teacher="Michael Dukakis"
         />
       </Semester>
 
       <Semester name="Spring 2009">
         <Class
-          name="Physics 1 for Engineers"
+          defaultName="Physics 1 for Engineers"
+          nameId="courses.physics-1"
           teacher="Henry Smith"
         />
         <Class
-          name="Writing for the Technical Professions"
+          defaultName="Writing for the Technical Professions"
+          nameId="courses.writing-technical"
           teacher="Tom Akbari"
         />
         <Class
           masters={true}
-          name="Research in High-Performance Computing"
+          defaultName="Research in High-Performance Computing"
           teacher="Gene Cooperman"
         />
         <Class
           masters={true}
-          name="Algorithms"
+          defaultName="Algorithms"
           teacher="Virgil Pavlu"
         />
       </Semester>
@@ -150,98 +172,98 @@ export default function Courses() {
 
       <Semester name="Spring 2008">
         <Class
-          name="Japanese Literature and Culture"
+          defaultName="Japanese Literature and Culture"
           teacher="Tom Havens"
         />
         <Class
-          name="General Purpose GPU Programming"
+          defaultName="General Purpose GPU Programming"
           teacher="Gene Cooperman"
         />
         <Class
           masters={true}
-          name="Compilers"
+          defaultName="Compilers"
           teacher="Jesse Tov"
         />
         <Class
-          name="Directed Study (DMTCP)"
+          defaultName="Directed Study (DMTCP)"
           teacher="Gene Cooperman"
         />
       </Semester>
 
       <Semester name="Spring 2007">
         <Class
-          name="Probability and Statistics"
+          defaultName="Probability and Statistics"
           teacher="Aidong Ding"
         />
         <Class
-          name="Theory of Computation"
+          defaultName="Theory of Computation"
           teacher="Viera Proulx"
         />
         <Class
-          name="Computer Organization"
+          defaultName="Computer Organization"
           teacher="Gene Cooperman"
         />
         <Class
           masters={true}
-          name="Principles of Programming Languages"
+          defaultName="Principles of Programming Languages"
           teacher="Karl Lieberherr"
         />
       </Semester>
 
       <Semester name="Spring 2007">
         <Class
-          name="Symbolic Logic"
+          defaultName="Symbolic Logic"
           teacher="Michael Meyer"
         />
         <Class
-          name="Linear Algebra"
+          defaultName="Linear Algebra"
           teacher="Eugene Gover"
         />
         <Class
-          name="Calculus 3 for Science / Engineering"
+          defaultName="Calculus 3 for Science / Engineering"
           teacher="Robert Lupi"
         />
         <Class
-          name="Honors Freshman Seminar"
+          defaultName="Honors Freshman Seminar"
           teacher="Richard Rasala"
         />
         <Class
-          name="Directed Study (ACL2)"
+          defaultName="Directed Study (ACL2)"
           teacher="Dale Vaillancourt"
         />
         <Class
-          name="Object-Oriented Design"
+          defaultName="Object-Oriented Design"
           teacher="Carole Hafner"
         />
         <Class
-          name="CS/IS Overview"
+          defaultName="CS/IS Overview"
           teacher="Melvin Simms"
         />
       </Semester>
 
       <Semester name="Fall 2006">
         <Class
-          name="Fundamentals of Computer Science 1"
+          defaultName="Fundamentals of Computer Science 1"
           teacher="Matthias Felleisen"
         />
         <Class
-          name="Honors Introduction to Philosophy"
+          defaultName="Honors Introduction to Philosophy"
           teacher="William DeAngelis"
         />
         <Class
-          name="Discrete Mathematics"
+          defaultName="Discrete Mathematics"
           teacher="Javed Aslam"
         />
         <Class
-          name="Calculus 2 for Science / Engineering"
+          defaultName="Calculus 2 for Science / Engineering"
           teacher="Robert Lupi"
         />
         <Class
-          name="Honors Freshman Seminar"
+          defaultName="Honors Freshman Seminar"
           teacher="Richard Rasala"
         />
         <Class
-          name="CS/IS Overview"
+          defaultName="CS/IS Overview"
           teacher="Melvin Simms"
         />
       </Semester>
