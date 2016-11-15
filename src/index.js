@@ -8,6 +8,11 @@ import Resume from './resume';
 
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
+import { addLocaleData } from 'react-intl';
+import de from 'react-intl/locale-data/de';
+
+addLocaleData([ ...de ]);
+
 const router = (
     <Router history={hashHistory}>
         <Route path="/" component={App}>

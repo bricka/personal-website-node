@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
+import { IntlProvider } from 'react-intl';
+
 const languages = [ 'en', 'de' ];
 
 export default class LanguageSelector extends Component {
@@ -9,12 +11,14 @@ export default class LanguageSelector extends Component {
   };
 
   render = () => (
-    <div className="language-selector">
-      Language:&nbsp;
-      <span className="language-options">
-        {this._languageOptions().map((l, i) => i !== 0 ? <span> / {l}</span> : l)}
-      </span>
-    </div>
+    <IntlProvider>
+      <div className="language-selector">
+        Language:&nbsp;
+        <span className="language-options">
+          {this._languageOptions().map((l, i) => i !== 0 ? <span> / {l}</span> : l)}
+        </span>
+      </div>
+    </IntlProvider>
   );
 
   _languageOptions = () => languages.map(l => {
