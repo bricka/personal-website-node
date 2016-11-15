@@ -30,11 +30,16 @@ export default class LanguageSelector extends Component {
       return (
         <a
           href="#" 
-          onClick={() => this.props.onLanguageChange(l)}
+          onClick={this._getHandlerForLanguageClick(l)}
         >
           {l}
         </a>
       );
     }
   });
+
+  _getHandlerForLanguageClick = language => e => {
+    e && e.preventDefault();
+    this.props.onLanguageChange(language);
+  }
 }

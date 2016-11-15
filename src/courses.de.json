@@ -1,4 +1,6 @@
 {
+  "courses.masters-level": "bezeichnet einen Master-Level-Kurs",
+  "courses.phd-level": "bezeichnet einen PhD-Level-Kurs",
   "courses.fundamentals-of-ai": "Grundlagen von Künstlicher Intelligenz",
   "courses.network-security": "Netzwerksicherheit",
   "courses.directed-study-dmtcp-openmpi": "Gerichtet Studie (DMTCP/OpenMPI)",
@@ -10,5 +12,7 @@
   "courses.physics-2": "Physik 2 für Ingenieuren",
   "courses.public-policy": "Public Policy und Verwaltung",
   "courses.physics-1": "Physik 1 für Ingenieuren",
-  "courses.writing-technical": "Schreiben für die Technische Berufe"
+  "courses.writing-technical": "Schreiben für die Technische Berufe",
+  "courses.research-hpc": "Forschung von Hochleistungsrechnen",
+  "courses.algorithms": "Algorithmen"
 }

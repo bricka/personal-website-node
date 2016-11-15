@@ -2,16 +2,20 @@ import React, { Component, PropTypes } from 'react';
 
 import { FormattedMessage } from 'react-intl';
 
+import { isArray } from 'lodash';
+
 class Semester extends Component {
   static propTypes = {
     children: PropTypes.node,
     comment: PropTypes.string,
-    name: PropTypes.string.isRequired
+    name: PropTypes.string.isRequired,
+    seasonId: PropTypes.string.isRequired,
+    year: PropTypes.number.isRequired
   };
 
   render = () => (
     <div>
-      <h2>{this.props.name}</h2>
+      <h2>{this._getSeasonString()} {this.props.year}</h2>
 
       {this.props.comment && (
         <p className="semester-comment">{this.props.comment}</p>
@@ -22,6 +26,14 @@ class Semester extends Component {
       </ul>
     </div>
   );
+
+  _getSeasonString = () => {
+    if (isArray(this.props.season)) {
+      return this.props.season.join(' and ');
+    }
+
+    return this.props.season;
+  };
 }
 
 class Class extends Component {
@@ -57,11 +69,24 @@ export default function Courses() {
   return (
     <div>
       <ul class="unmarked">
-          <li>* &ndash; denotes a Masters-level course</li>
-          <li>† &ndash; denotes a PhD-level course</li>
+        <li>* &ndash;
+          <FormattedMessage
+            id="courses.masters-level"
+            defaultMessage="denotes a Masters-level course"
+          />
+        </li>
+        <li>† &ndash;
+          <FormattedMessage
+            id="courses.phd-level"
+            defaultMessage="denotes a PhD-level course"
+          />
+        </li>
       </ul>
 
-      <Semester name="Spring 2011">
+      <Semester
+        seasonId="spring"
+        year={2011}
+      >
         <Class
           defaultName="Fundamentals of Artificial Intelligance"
           masters={true}
@@ -78,10 +103,14 @@ export default function Courses() {
 
       <Semester
         comment="On co-op with Amazon.com"
-        name="Summer 2 and Fall 2010"
+        seasonId="summer-2-and-fall"
+        year={2010}
       />
 
-      <Semester name="Summer 1 2010">
+      <Semester
+        seasonId="summer-1"
+        year={2010}
+      >
         <Class
           defaultName="Directed Study (DMTCP/OpenMPI)"
           masters={true}
@@ -95,7 +124,10 @@ export default function Courses() {
         />
       </Semester>
 
-      <Semester name="Spring 2010">
+      <Semester
+        seasonId="spring"
+        year={2010}
+      >
         <Class
           defaultName="Group Theory"
           nameId="courses.group-theory"
@@ -121,7 +153,8 @@ export default function Courses() {
 
       <Semester
         comment="Studying abroad at J.F. Oberlin University in Machida, Tokyo, Japan"
-        name="Fall 2009"
+        seasonId="fall"
+        year={2009}
       >
         <Class defaultName="本語 II-B (Japanese II-B)" />
         <Class defaultName="日本の神話学 (Japanese Mythology)" />
@@ -129,7 +162,11 @@ export default function Courses() {
         <Class defaultName="漢字 I (Kanji I)" />
       </Semester>
 
-      <Semester name="Summer 1 2009">
+      <Semester
+        name="Summer 1 2009"
+        seasonId="summer-1"
+        year={2009}
+      >
         <Class
           defaultName="Physics 2 for Engineers"
           nameId="courses.physics-2"
@@ -142,7 +179,10 @@ export default function Courses() {
         />
       </Semester>
 
-      <Semester name="Spring 2009">
+      <Semester
+        seasonId="spring"
+        year={2009}
+      >
         <Class
           defaultName="Physics 1 for Engineers"
           nameId="courses.physics-1"
@@ -154,23 +194,29 @@ export default function Courses() {
           teacher="Tom Akbari"
         />
         <Class
-          masters={true}
           defaultName="Research in High-Performance Computing"
+          masters={true}
+          nameId="courses.research-hpc"
           teacher="Gene Cooperman"
         />
         <Class
           masters={true}
           defaultName="Algorithms"
+          nameId="courses.algorithms"
           teacher="Virgil Pavlu"
         />
       </Semester>
 
       <Semester
         comment="On co-op with Amazon.com"
-        name="Summer 2 and Fall 2008"
+        seasonId="summer-2-and-fall"
+        year={2008}
       />
 
-      <Semester name="Spring 2008">
+      <Semester
+        seasonId="spring"
+        year={2008}
+      >
         <Class
           defaultName="Japanese Literature and Culture"
           teacher="Tom Havens"
@@ -190,7 +236,10 @@ export default function Courses() {
         />
       </Semester>
 
-      <Semester name="Spring 2007">
+      <Semester
+        seasonId="spring"
+        year={2007}
+      >
         <Class
           defaultName="Probability and Statistics"
           teacher="Aidong Ding"
@@ -210,7 +259,10 @@ export default function Courses() {
         />
       </Semester>
 
-      <Semester name="Spring 2007">
+      <Semester
+        seasonId="spring"
+        year={2007}
+      >
         <Class
           defaultName="Symbolic Logic"
           teacher="Michael Meyer"
@@ -241,7 +293,10 @@ export default function Courses() {
         />
       </Semester>
 
-      <Semester name="Fall 2006">
+      <Semester
+        seasonId="fall"
+        year={2006}
+      >
         <Class
           defaultName="Fundamentals of Computer Science 1"
           teacher="Matthias Felleisen"
