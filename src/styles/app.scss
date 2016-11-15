@@ -1,19 +1,104 @@
-.app {
+body {
+  background : #9FD7FF;
+  background-image : url('background_083.gif');
+  background-repeat : repeat;
+  font-size : 13px;
+}
+
+div.all_content {
+  background : #FFF;
+  border-right : 1px solid #909090;
+  border-bottom : 1px solid #909090;
+  border-left : 1px solid #909090;
+  width : 600px;
+  margin : 30px auto 30px auto;
+}
+
+div.header {
+  background : #999;
+  color: #fcc915;
+  text-align : center;
+  font-size : 20px;
+}
+
+div.header h1 {
+  margin-top : 0;
+  margin-bottom : 0;
+}
+
+div.menu {
+  background : #D9D9D9;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
   text-align: center;
 }
 
-.app-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+div.menu a {
+  color : #00F;
+  border-width : 1px;
+  border-style : solid;
+  border-color : #D9D9D9 #909090 #909090 #D9D9D9;
+  text-decoration : none;
+  margin : 0px 5px 0px 10px;
+  padding : 0px 2px 0px 2px;
 }
 
-.app-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+div.menu a:hover {
+  background : #B7B7B7;
+  border-color : #909090 #D9D9D9 #D9D9D9 #909090;
 }
 
-.app-intro {
-  font-size: large;
+div.content {
+  padding: 10px 10px 10px 15px;
+}
+
+div.content thead td {
+  text-align : center;
+  font-weight : bold;
+}
+
+div.footer {
+  text-align : center;
+  margin-top : 30px;
+}
+
+div.footer img {
+  border-style : none;
+}
+
+p.copyright {
+  font-size : x-small;
+}
+
+div.error {
+  margin-top : 5px;
+  background : #F00;
+  color : #FFF;
+  display : block;
+  text-align : center;
+  font-size : larger;
+}
+
+span.bold {
+  font-weight : bold;
+}
+
+span.superscript {
+  font-weight : normal;
+  font-size : 75%;
+  vertical-align : super;
+}
+
+ul.unmarked {
+  list-style-type : none;
+}
+
+div.center {
+  text-align : center;
+}
+
+p.semester_comment {
+  margin-left: 5pt;
+  font-style: italic;
 }
