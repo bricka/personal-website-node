@@ -3,9 +3,9 @@ import './styles/app.scss';
 
 import Header from './header';
 
-import { withState } from 'recompose';
+import { compose, withState } from 'recompose';
 
-export default class App extends Component {
+class App extends Component {
   static propTypes = {
     currentLanguage: PropTypes.string.isRequired,
     onLanguageChange: PropTypes.func.isRequired
@@ -24,3 +24,7 @@ export default class App extends Component {
     </div>
   );
 }
+
+export default compose(
+  withState('currentLanguage', 'onLanguageChange', 'en')
+)(App);

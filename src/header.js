@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import Language from './language';
 import Menu from './menu';
 
-export default function Header() {
-  return (
+export default class Header extends Component {
+  static propTypes = {
+    currentLanguage: PropTypes.string.isRequired,
+    onLanguageChange: PropTypes.func.isRequired
+  };
+
+  render = () => (
     <div className="header">
       <div className="title">
         <h1>Alex Brick</h1>
@@ -12,7 +17,10 @@ export default function Header() {
 
       <Menu/>
 
-      <Language currentLanguage="en"/>
+      <Language
+        currentLanguage={this.props.currentLanguage}
+        onLanguageChange={this.props.onLanguageChange}
+      />
     </div>
   );
 }
