@@ -5,6 +5,10 @@ body {
   font-size : 13px;
 }
 
+a {
+  color: #00F;
+}
+
 div.app {
   border : 1px solid #909090;
   width : 600px;
@@ -38,7 +42,6 @@ div.header {
     padding: 5px;
 
     a {
-      color: #00F;
       border-width: 1px;
       border-style: solid;
       border-color: #D9D9D9 #909090 #909090 #D9D9D9;
