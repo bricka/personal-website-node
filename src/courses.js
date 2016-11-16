@@ -29,7 +29,8 @@ const seasonIntlData = {
 class Semester extends Component {
   static propTypes = {
     children: PropTypes.node,
-    comment: PropTypes.string,
+    commentId: PropTypes.string,
+    defaultComment: PropTypes.string,
     seasonId: PropTypes.string.isRequired,
     year: PropTypes.number.isRequired
   };
@@ -44,8 +45,14 @@ class Semester extends Component {
         {this.props.year}
       </h2>
 
-      {this.props.comment && (
-        <p className="semester-comment">{this.props.comment}</p>
+      {this.props.commentId && (
+         <p className="comment">
+           {this.props.comment}
+           <FormattedMessage
+             id={this.props.commentId}
+             defaultMessage={this.props.defaultComment}
+            />
+         </p>
       )}
 
       <ul>
@@ -121,7 +128,8 @@ export default function Courses() {
       </Semester>
 
       <Semester
-        comment="On co-op with Amazon.com"
+        commentId="semester.comment.amazon-coop"
+        defaultComment="On co-op with Amazon.com"
         seasonId={SUMMER2_FALL}
         year={2010}
       />
@@ -171,7 +179,8 @@ export default function Courses() {
       </Semester>
 
       <Semester
-        comment="Studying abroad at J.F. Oberlin University in Machida, Tokyo, Japan"
+        commentId="semester.comment.jf-oberlin"
+        defaultComment="Studying abroad at J.F. Oberlin University in Machida, Tokyo, Japan"
         seasonId={FALL}
         year={2009}
       >
@@ -227,7 +236,8 @@ export default function Courses() {
       </Semester>
 
       <Semester
-        comment="On co-op with Amazon.com"
+        commentId="semester.comment.amazon-coop"
+        defaultComment="On co-op with Amazon.com"
         seasonId={SUMMER2_FALL}
         year={2008}
       />
@@ -238,19 +248,23 @@ export default function Courses() {
       >
         <Class
           defaultName="Japanese Literature and Culture"
+          nameId="courses.japanese-literature"
           teacher="Tom Havens"
         />
         <Class
           defaultName="General Purpose GPU Programming"
+          nameId="courses.gpu-programming"
           teacher="Gene Cooperman"
         />
         <Class
           masters={true}
           defaultName="Compilers"
+          nameId="courses.compilers"
           teacher="Jesse Tov"
         />
         <Class
           defaultName="Directed Study (DMTCP)"
+          nameId="courses.directed-study-dmtcp"
           teacher="Gene Cooperman"
         />
       </Semester>
@@ -261,19 +275,23 @@ export default function Courses() {
       >
         <Class
           defaultName="Probability and Statistics"
+          nameId="courses.probability"
           teacher="Aidong Ding"
         />
         <Class
           defaultName="Theory of Computation"
+          nameId="courses.theory-of-computation"
           teacher="Viera Proulx"
         />
         <Class
           defaultName="Computer Organization"
+          nameId="courses.computer-organization"
           teacher="Gene Cooperman"
         />
         <Class
           masters={true}
           defaultName="Principles of Programming Languages"
+          nameId="courses.principles-of-pl"
           teacher="Karl Lieberherr"
         />
       </Semester>
@@ -284,30 +302,37 @@ export default function Courses() {
       >
         <Class
           defaultName="Symbolic Logic"
+          nameId="courses.symbolic-logic"
           teacher="Michael Meyer"
         />
         <Class
           defaultName="Linear Algebra"
+          nameId="courses.linear-algebra"
           teacher="Eugene Gover"
         />
         <Class
           defaultName="Calculus 3 for Science / Engineering"
+          nameId="courses.calculus-3"
           teacher="Robert Lupi"
         />
         <Class
           defaultName="Honors Freshman Seminar"
+          nameId="courses.freshman-seminar"
           teacher="Richard Rasala"
         />
         <Class
           defaultName="Directed Study (ACL2)"
+          nameId="courses.directed-study-acl2"
           teacher="Dale Vaillancourt"
         />
         <Class
           defaultName="Object-Oriented Design"
+          nameId="courses.object-oriented"
           teacher="Carole Hafner"
         />
         <Class
           defaultName="CS/IS Overview"
+          nameId="courses.cs-is"
           teacher="Melvin Simms"
         />
       </Semester>
@@ -318,26 +343,32 @@ export default function Courses() {
       >
         <Class
           defaultName="Fundamentals of Computer Science 1"
+          nameId="courses.fundies-1"
           teacher="Matthias Felleisen"
         />
         <Class
           defaultName="Honors Introduction to Philosophy"
+          nameId="courses.philosophy"
           teacher="William DeAngelis"
         />
         <Class
           defaultName="Discrete Mathematics"
+          nameId="courses.discrete-math"
           teacher="Javed Aslam"
         />
         <Class
           defaultName="Calculus 2 for Science / Engineering"
+          nameId="courses.calculus-2"
           teacher="Robert Lupi"
         />
         <Class
           defaultName="Honors Freshman Seminar"
+          nameId="courses.freshman-seminar"
           teacher="Richard Rasala"
         />
         <Class
           defaultName="CS/IS Overview"
+          nameId="courses.cs-is"
           teacher="Melvin Simms"
         />
       </Semester>
