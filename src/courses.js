@@ -2,20 +2,47 @@ import React, { Component, PropTypes } from 'react';
 
 import { FormattedMessage } from 'react-intl';
 
-import { isArray } from 'lodash';
+const SPRING = 'spring';
+const FALL = 'fall';
+const SUMMER2_FALL = 'summer2-fall';
+const SUMMER1 = 'summer-1';
+
+const seasonIntlData = {
+  [SPRING]: {
+    id: 'spring',
+    defaultMessage: 'Spring'
+  },
+  [FALL]: {
+    id: 'fall',
+    defaultMessage: 'Fall'
+  },
+  [SUMMER2_FALL]: {
+    id: 'summer-2-and-fall',
+    defaultMessage: 'Summer 2 and Fall'
+  },
+  [SUMMER1]: {
+    id: 'summer-1',
+    defaultMessage: 'Summer 1'
+  }
+};
 
 class Semester extends Component {
   static propTypes = {
     children: PropTypes.node,
     comment: PropTypes.string,
-    name: PropTypes.string.isRequired,
     seasonId: PropTypes.string.isRequired,
     year: PropTypes.number.isRequired
   };
 
   render = () => (
     <div>
-      <h2>{this._getSeasonString()} {this.props.year}</h2>
+      <h2>
+        <FormattedMessage
+          {...seasonIntlData[this.props.seasonId]}
+        />
+        &nbsp;
+        {this.props.year}
+      </h2>
 
       {this.props.comment && (
         <p className="semester-comment">{this.props.comment}</p>
@@ -26,14 +53,6 @@ class Semester extends Component {
       </ul>
     </div>
   );
-
-  _getSeasonString = () => {
-    if (isArray(this.props.season)) {
-      return this.props.season.join(' and ');
-    }
-
-    return this.props.season;
-  };
 }
 
 class Class extends Component {
@@ -84,7 +103,7 @@ export default function Courses() {
       </ul>
 
       <Semester
-        seasonId="spring"
+        seasonId={SPRING}
         year={2011}
       >
         <Class
@@ -103,12 +122,12 @@ export default function Courses() {
 
       <Semester
         comment="On co-op with Amazon.com"
-        seasonId="summer-2-and-fall"
+        seasonId={SUMMER2_FALL}
         year={2010}
       />
 
       <Semester
-        seasonId="summer-1"
+        seasonId={SUMMER1}
         year={2010}
       >
         <Class
@@ -125,7 +144,7 @@ export default function Courses() {
       </Semester>
 
       <Semester
-        seasonId="spring"
+        seasonId={SPRING}
         year={2010}
       >
         <Class
@@ -153,7 +172,7 @@ export default function Courses() {
 
       <Semester
         comment="Studying abroad at J.F. Oberlin University in Machida, Tokyo, Japan"
-        seasonId="fall"
+        seasonId={FALL}
         year={2009}
       >
         <Class defaultName="本語 II-B (Japanese II-B)" />
@@ -164,7 +183,7 @@ export default function Courses() {
 
       <Semester
         name="Summer 1 2009"
-        seasonId="summer-1"
+        seasonId={SUMMER1}
         year={2009}
       >
         <Class
@@ -180,7 +199,7 @@ export default function Courses() {
       </Semester>
 
       <Semester
-        seasonId="spring"
+        seasonId={SPRING}
         year={2009}
       >
         <Class
@@ -209,12 +228,12 @@ export default function Courses() {
 
       <Semester
         comment="On co-op with Amazon.com"
-        seasonId="summer-2-and-fall"
+        seasonId={SUMMER2_FALL}
         year={2008}
       />
 
       <Semester
-        seasonId="spring"
+        seasonId={SPRING}
         year={2008}
       >
         <Class
@@ -237,7 +256,7 @@ export default function Courses() {
       </Semester>
 
       <Semester
-        seasonId="spring"
+        seasonId={SPRING}
         year={2007}
       >
         <Class
@@ -260,7 +279,7 @@ export default function Courses() {
       </Semester>
 
       <Semester
-        seasonId="spring"
+        seasonId={SPRING}
         year={2007}
       >
         <Class
@@ -294,7 +313,7 @@ export default function Courses() {
       </Semester>
 
       <Semester
-        seasonId="fall"
+        seasonId={FALL}
         year={2006}
       >
         <Class

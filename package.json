@@ -49,6 +49,7 @@
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
+    "cookies-js": "^1.2.3",
     "node-sass": "^3.11.3",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",

@@ -5,13 +5,27 @@ import { FormattedMessage } from 'react-intl';
 export default function Resume() {
   return (
     <div>
-      <p>My resume is available through these links:</p>
+      <p>
+        <FormattedMessage
+          id="resume.my-resume-is-available"
+          defaultMessage="My resume is available through these links:"
+        />
+      </p>
 
       <p>
         <a href="/resume.pdf">
           <FormattedMessage
             id="resume.my-resume.en"
             defaultMessage="My Resume (American-style)"
+          />
+        </a>
+      </p>
+
+      <p>
+        <a href="/resume-de.pdf">
+          <FormattedMessage
+            id="resume.my-resume.de"
+            defaultMessage="My Resume (German-style)"
           />
         </a>
       </p>

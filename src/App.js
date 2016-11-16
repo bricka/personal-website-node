@@ -4,7 +4,9 @@ import './styles/app.scss';
 import Header from './header';
 import { IntlProvider } from 'react-intl';
 
-import { compose, withState } from 'recompose';
+import { compose, withProps, withState } from 'recompose';
+
+import Cookies from 'cookies-js';
 
 import coursesDe from './courses.de';
 
@@ -16,7 +18,14 @@ const messages = {
     'menu.projects': 'Projekten',
     'menu.contact': 'Kontakt',
 
+    'resume.my-resume-is-available': 'Mein Lebenslauf ist an diesen Links:',
     'resume.my-resume.en': 'Mein Lebenslauf (Amerikan)',
+    'resume.my-resume.de': 'Mein Lebenslauf (Deutsch)',
+
+    'spring': 'Frühling',
+    'fall': 'Herbst',
+    'summer-2-and-fall': 'Sommer 2 und Herbst',
+    'summer-1': 'Sommer 1',
 
     ...coursesDe
   }
@@ -40,7 +49,7 @@ class App extends Component {
         />
 
         <div className="body">
-          {this.props.children}
+          {React.cloneElement(this.props.children, { currentLanguage: this.props.currentLanguage })}
         </div>
       </div>
     </IntlProvider>
@@ -48,5 +57,11 @@ class App extends Component {
 }
 
 export default compose(
-  withState('currentLanguage', 'onLanguageChange', 'en')
+  withState('currentLanguage', 'setCurrentLanguage', Cookies.get('currentLanguage') || 'en'),
+  withProps(({ setCurrentLanguage }) => ({
+    onLanguageChange: l => {
+      Cookies.set('currentLanguage', l);
+      setCurrentLanguage(l);
+    }
+  }))
 )(App);
