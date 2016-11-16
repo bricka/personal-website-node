@@ -11,8 +11,9 @@ a {
 
 div.app {
   border : 1px solid #909090;
-  width : 600px;
   margin : 30px auto 30px auto;
+  min-width: 600px;
+  width : 50%;
 }
 
 div.body {
