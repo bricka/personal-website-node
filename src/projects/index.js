@@ -1,10 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
 
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router';
 
-export default class Projects extends Component {
-  render = () => (
+export default function Projects() {
+  return (
     <div>
       <p>
         <FormattedMessage
@@ -25,12 +25,18 @@ export default class Projects extends Component {
             />
           </Link>
         </li>
-        <li>giles CD Ripper</li>
         <li>
-          <FormattedMessage
-            id="projects.personal-website"
-            defaultMessage="Personal Website"
-          />
+          <Link to="/projects/giles">
+            giles CD Ripper
+          </Link>
+        </li>
+        <li>
+          <Link to="/projects/personal-website">
+            <FormattedMessage
+              id="projects.personal-website"
+              defaultMessage="Personal Website"
+            />
+          </Link>
         </li>
       </ul>
     </div>

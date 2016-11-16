@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 import Courses from './courses';
+import GilesProject from './projects/giles';
 import Home from './home';
 import MipsVimHighlightlingProject from './projects/mips_vim';
+import PersonalWebsiteProject from './projects/personal_website';
 import Projects from './projects';
 import Resume from './resume';
 
@@ -23,6 +25,8 @@ const router = (
             <Route path="courses" component={Courses}/>
             <Route path="projects" component={Projects}/>
             <Route path="projects/mips-vim" component={MipsVimHighlightlingProject}/>
+            <Route path="projects/giles" component={GilesProject}/>
+            <Route path="projects/personal-website" component={PersonalWebsiteProject}/>
         </Route>
     </Router>
 );
