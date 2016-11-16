@@ -27,7 +27,11 @@ const messages = {
     'summer-2-and-fall': 'Sommer 2 und Herbst',
     'summer-1': 'Sommer 1',
 
-    ...coursesDe
+    ...coursesDe,
+
+    'projects.overview': 'Ich habe an mehreren persönliche Projekten gearbeitet.  Sie können einige auf meiner Seite von {githubLink} finden.  Einige meiner Favoriten sind hier:',
+    'projects.mips-vim': 'MIPS Syntax-Hervoerhebung für Vim',
+    'projects.personal-website': 'Persönliche Website'
   }
 };
 

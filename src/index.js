@@ -4,6 +4,8 @@ import App from './App';
 
 import Courses from './courses';
 import Home from './home';
+import MipsVimHighlightlingProject from './projects/mips_vim';
+import Projects from './projects';
 import Resume from './resume';
 
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
@@ -19,11 +21,12 @@ const router = (
             <IndexRoute component={Home}/>
             <Route path="resume" component={Resume}/>
             <Route path="courses" component={Courses}/>
+            <Route path="projects" component={Projects}/>
+            <Route path="projects/mips-vim" component={MipsVimHighlightlingProject}/>
         </Route>
     </Router>
 );
 
-            // <Route path="projects" component={Projects}/>
             // <Route path="contact" component={Contact}/>
 
 ReactDOM.render(
