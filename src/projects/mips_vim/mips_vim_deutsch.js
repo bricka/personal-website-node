@@ -8,7 +8,7 @@ export default function MipsVimHighlightingProjectEnglish() {
       </p>
 
       <p>
-        Das Link zu Script ist hier.  Stellen Sie es in Ihrem Verzeichnis von Syntax (im UNIX, das ist <code>~/.vim/syntax</code>), und Sie können mit <code>:set syntax=mips</code> es möglichen.
+        Das Link zum Skript ist hier.  Stellen Sie es in Ihrem Verzeichnis von Syntax (im UNIX, das ist <code>~/.vim/syntax</code>), und Sie können mit <code>:set syntax=mips</code> es möglichen.
       </p>
 
       <p>

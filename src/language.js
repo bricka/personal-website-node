@@ -1,8 +1,15 @@
 import React, { Component, PropTypes } from 'react';
 
-import { IntlProvider } from 'react-intl';
-
-const languages = [ 'en', 'de' ];
+const languages = [
+  {
+    locale: 'en',
+    name: 'English'
+  },
+  {
+    locale: 'de',
+    name: 'Deutsch'
+  }
+];
 
 export default class LanguageSelector extends Component {
   static propTypes = {
@@ -11,37 +18,35 @@ export default class LanguageSelector extends Component {
   };
 
   render = () => (
-    <IntlProvider>
-      <div className="language-selector">
-        Language:&nbsp;
-        <span className="language-options">
-          {this._renderLanguageOptions()}
-        </span>
-      </div>
-    </IntlProvider>
+    <div className="language-selector">
+      Language:&nbsp;
+      <span className="language-options">
+        {this._renderLanguageOptions()}
+      </span>
+    </div>
   );
 
   _renderLanguageOptions = () => languages.map((l, i) => {
     if (i === 0) {
-      return this._languageOption(l, l);
+      return this._languageOption(l, l.locale);
     }
 
-    return <span key={l}> / {this._languageOption(l)}</span>;
+    return <span key={l.locale}> / {this._languageOption(l)}</span>;
   });
 
-  _languageOption = (language, key) => {
-    if (this.props.currentLanguage === language) {
+  _languageOption = ({ name, locale }, key) => {
+    if (this.props.currentLanguage === locale) {
       return (
-        <span className="current-language" key={key}>{language}</span>
+        <span className="current-language" key={key}>{name}</span>
       );
     } else {
       return (
         <a
           href="#"
           key={key}
-          onClick={this._getHandlerForLanguageClick(language)}
+          onClick={this._getHandlerForLanguageClick(locale)}
         >
-          {language}
+          {name}
         </a>
       );
     }
