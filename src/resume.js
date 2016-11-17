@@ -8,7 +8,7 @@ export default function Resume() {
       <p>
         <FormattedMessage
           id="resume.my-resume-is-available"
-          defaultMessage="My resume is available through these links:"
+          defaultMessage="My resume is available through this link:"
         />
       </p>
 
