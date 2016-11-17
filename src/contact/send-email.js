@@ -6,7 +6,7 @@ const client = sendgrid(process.env.SENDGRID_API_KEY);
 
 export default (name, from, subject, body) => {
     const from_email = new helper.Email(from);
-    const content = new helper.Contect('text/plain', body);
+    const content = new helper.Content('text/plain', body);
     const mail = new helper.Mail(from_email, subject, TO_EMAIL, content);
 
     const request = client.emptyRequest({
