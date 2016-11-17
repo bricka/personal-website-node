@@ -85,10 +85,10 @@ export default class Contact extends Component {
     e.preventDefault();
 
     const name = this.name.value;
-    const to = this.to.value;
+    const from = this.from.value;
     const subject = this.subject.value;
     const body = this.body.value;
 
-    sendEmail(name, to, subject, body);
+    sendEmail(name, from, subject, body);
   }
 }
