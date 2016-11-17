@@ -21,14 +21,14 @@ export default function Resume() {
         </a>
       </p>
 
-      <p>
+      {/*<p>
         <a href="/resume-de.pdf">
           <FormattedMessage
             id="resume.my-resume.de"
             defaultMessage="My Resume (German-style)"
           />
         </a>
-      </p>
+      </p>*/}
     </div>
   );
 }
