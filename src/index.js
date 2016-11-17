@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
+import Contact from './contact';
 import Courses from './courses';
 import GilesProject from './projects/giles';
 import Home from './home';
@@ -27,11 +28,11 @@ const router = (
             <Route path="projects/mips-vim" component={MipsVimHighlightlingProject}/>
             <Route path="projects/giles" component={GilesProject}/>
             <Route path="projects/personal-website" component={PersonalWebsiteProject}/>
+            <Route path="contact" component={Contact}/>
         </Route>
     </Router>
 );
 
-            // <Route path="contact" component={Contact}/>
 
 ReactDOM.render(
   router,

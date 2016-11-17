@@ -15,28 +15,37 @@ export default class LanguageSelector extends Component {
       <div className="language-selector">
         Language:&nbsp;
         <span className="language-options">
-          {this._languageOptions().map((l, i) => i !== 0 ? <span> / {l}</span> : l)}
+          {this._renderLanguageOptions()}
         </span>
       </div>
     </IntlProvider>
   );
 
-  _languageOptions = () => languages.map(l => {
-    if (this.props.currentLanguage === l) {
+  _renderLanguageOptions = () => languages.map((l, i) => {
+    if (i === 0) {
+      return this._languageOption(l, l);
+    }
+
+    return <span key={l}> / {this._languageOption(l)}</span>;
+  });
+
+  _languageOption = (language, key) => {
+    if (this.props.currentLanguage === language) {
       return (
-        <span className="current-language">{l}</span>
+        <span className="current-language" key={key}>{language}</span>
       );
     } else {
       return (
         <a
-          href="#" 
-          onClick={this._getHandlerForLanguageClick(l)}
+          href="#"
+          key={key}
+          onClick={this._getHandlerForLanguageClick(language)}
         >
-          {l}
+          {language}
         </a>
       );
     }
-  });
+  };
 
   _getHandlerForLanguageClick = language => e => {
     e && e.preventDefault();
