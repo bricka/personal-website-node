@@ -1,36 +1,53 @@
 import React from 'react';
 
 import { FormattedMessage } from 'react-intl';
-import { Link } from 'react-router';
+import { IndexLink, Link } from 'react-router';
+
+const ACTIVE_CLASS_NAME = 'selectedMenuItem';
 
 export default function Menu() {
   return (
     <div className="menu">
-      <Link to="/">
+      <IndexLink
+        activeClassName={ACTIVE_CLASS_NAME}
+        to="/"
+      >
         <FormattedMessage
           id="menu.home"
           defaultMessage="Home"
         />
-      </Link>
-      <Link to="/resume">
+      </IndexLink>
+      <Link
+        activeClassName={ACTIVE_CLASS_NAME}
+        to="/resume"
+      >
         <FormattedMessage
           id="menu.resume"
           defaultMessage="Resume"
         />
       </Link>
-      <Link to="/courses">
+      <Link
+        activeClassName={ACTIVE_CLASS_NAME}
+        to="/courses"
+      >
         <FormattedMessage
           id="menu.courses"
           defaultMessage="Courses"
         />
       </Link>
-      <Link to="/projects">
+      <Link
+        activeClassName={ACTIVE_CLASS_NAME}
+        to="/projects"
+      >
         <FormattedMessage
           id="menu.projects"
           defaultMessage="Projects"
         />
       </Link>
-      <Link to="/contact">
+      <Link
+        activeClassName={ACTIVE_CLASS_NAME}
+        to="/contact"
+      >
         <FormattedMessage
           id="menu.contact"
           defaultMessage="Contact"

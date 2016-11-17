@@ -90,7 +90,7 @@ div.header {
       margin: 0px 5px 0px 10px;
       padding: 2px;
 
-      &:hover {
+      &:hover, &.selectedMenuItem {
         background : #B7B7B7;
         border-color : #909090 #D9D9D9 #D9D9D9 #909090;
       }
