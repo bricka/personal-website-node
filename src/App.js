@@ -34,11 +34,7 @@ const messages = {
     'projects.mips-vim': 'MIPS Syntax-Hervoerhebung für Vim',
     'projects.personal-website': 'Persönliche Website',
 
-    'contact.name': 'Ihr Name:',
-    'contact.email': 'Ihre E-Mail-Addresse:',
-    'contact.subject': 'Betreff:',
-    'contact.message': 'Nachtricht:',
-    'contact.overview': "Wenn Sie mir kontakten wöllen, bitte benutzen Sie diese Form:"
+    'contact.how-to-reach': 'Sie können mir unter {email} schreiben'
   }
 };
 
