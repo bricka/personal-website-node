@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import { FormattedMessage } from 'react-intl';
 
-export default function Contact() {
-  return (
+import sendEmail from './send-email';
+
+export default class Contact extends Component {
+  render = () => (
     <div className="contact">
       <p>
         <FormattedMessage
@@ -12,7 +14,7 @@ export default function Contact() {
         />
       </p>
 
-      <form>
+      <form onSubmit={this._handleFormSubmit}>
         <div className="field">
           <label htmlFor="name">
             <FormattedMessage
@@ -23,6 +25,7 @@ export default function Contact() {
 
           <input
             name="name"
+            ref={input => this.name = input}
             type="text"
           />
         </div>
@@ -36,6 +39,7 @@ export default function Contact() {
           </label>
 
           <input
+            ref={input => this.from = input}
             type="email"
           />
         </div>
@@ -49,7 +53,7 @@ export default function Contact() {
             </label>
 
             <input
-              size={30}
+              ref={input => this.subject = input}
               type="text"
             />
         </div>
@@ -63,7 +67,7 @@ export default function Contact() {
             </label>
 
             <textarea
-              cols={32}
+              ref={input => this.body = input}
               rows={10}
             />
 
@@ -76,4 +80,15 @@ export default function Contact() {
       </form>
     </div>
   );
+
+  _handleFormSubmit = e => {
+    e.preventDefault();
+
+    const name = this.name.value;
+    const to = this.to.value;
+    const subject = this.subject.value;
+    const body = this.body.value;
+
+    sendEmail(name, to, subject, body);
+  }
 }
