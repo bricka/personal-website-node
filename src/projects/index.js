@@ -9,9 +9,16 @@ export default function Projects() {
       <p>
         <FormattedMessage
           id="projects.overview"
-          defaultMessage="I have worked on several personal projects over the years.  You can find some of them at my {githubLink} page.  Some of my favorites:"
+          defaultMessage="I have worked on several personal projects over the years.  You can find some of them at {myGithubPage}.  Some of my favorites:"
           values={{
-            githubLink: <a href="https://github.com/bricka">GitHub</a>
+            myGithubPage: (
+              <a href="https://github.com/bricka">
+                <FormattedMessage
+                  id="projects.my-github-page"
+                  defaultMessage="my GitHub page"
+                />
+              </a>
+            )
           }}
         />
       </p>

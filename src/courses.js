@@ -270,7 +270,7 @@ export default function Courses() {
       </Semester>
 
       <Semester
-        seasonId={SPRING}
+        seasonId={FALL}
         year={2007}
       >
         <Class

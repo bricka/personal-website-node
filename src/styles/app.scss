@@ -1,19 +1,57 @@
+@mixin desktop {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
 body {
-  background : #9FD7FF;
-  background-image : url('background_083.gif');
-  background-repeat : repeat;
+  background : #FFF;
   font-size : 13px;
+  margin: 0;
+
+  @include desktop {
+    background-image : url('background_083.gif');
+    background-repeat : repeat;
+    margin: 8px;
+  }
 }
 
 a {
   color: #00F;
 }
 
+ul {
+  padding-left: 10px;
+
+  @include desktop {
+    padding-left: 40px;
+  }
+
+  li {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include desktop {
+      margin-bottom: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
 div.app {
-  border : 1px solid #909090;
-  margin : 30px auto 30px auto;
-  min-width: 600px;
-  width : 50%;
+  width: 100vw;
+
+  @include desktop {
+    border : 1px solid #909090;
+    margin : 30px auto 30px auto;
+    min-width: 600px;
+    width : 50%;
+  }
 }
 
 div.body {
@@ -40,6 +78,7 @@ div.header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     padding: 5px;
 
     a {

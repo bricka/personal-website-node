@@ -29,7 +29,8 @@ const messages = {
 
     ...coursesDe,
 
-    'projects.overview': 'Ich habe an mehreren persönliche Projekten gearbeitet.  Sie können einige auf meiner Seite von {githubLink} finden.  Einige meiner Favoriten sind hier:',
+    'projects.overview': 'Ich habe an mehreren persönliche Projekten gearbeitet.  Sie können einige auf {myGithubPage} finden.  Einige meiner Favoriten sind hier:',
+    'projects.my-github-page': 'meiner Seite von GitHub',
     'projects.mips-vim': 'MIPS Syntax-Hervoerhebung für Vim',
     'projects.personal-website': 'Persönliche Website',
 
