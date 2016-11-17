@@ -16,7 +16,7 @@ export default function Resume() {
         <a href="/resume.pdf">
           <FormattedMessage
             id="resume.my-resume.en"
-            defaultMessage="My Resume (American-style)"
+            defaultMessage="My Resume"
           />
         </a>
       </p>
