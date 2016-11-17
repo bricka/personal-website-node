@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 
 export default function Contact() {
   return (
-    <div>
+    <div className="contact">
       <p>
         <FormattedMessage
           id="contact.overview"
@@ -13,78 +13,61 @@ export default function Contact() {
       </p>
 
       <form>
-        <table>
-          <tbody>
-            <tr>
-              <td>
-                <label htmlFor="name">
-                  <FormattedMessage
-                    id="contact.name"
-                    defaultMessage="Your Name:"
-                  />
-                </label>
-              </td>
-              <td className="value">
-                <input
-                  name="name"
-                  size={30}
-                  type="text"
-                />
-              </td>
-            </tr>
+        <div className="field">
+          <label htmlFor="name">
+            <FormattedMessage
+              id="contact.name"
+              defaultMessage="Your Name:"
+            />
+          </label>
 
-            <tr>
-              <td>
-                <label>
-                  <FormattedMessage
-                    id="contact.email"
-                    defaultMessage="Your Email Address:"
-                  />
-                </label>
-              </td>
-              <td>
-                <input
-                  size={30}
-                  type="email"
-                />
-              </td>
-            </tr>
+          <input
+            name="name"
+            type="text"
+          />
+        </div>
 
-            <tr>
-              <td>
-                <label>
-                  <FormattedMessage
-                    id="contact.subject"
-                    defaultMessage="Subject:"
-                  />
-                </label>
-              </td>
-              <td>
-                <input
-                  size={30}
-                  type="text"
-                />
-              </td>
-            </tr>
+        <div className="field">
+          <label>
+            <FormattedMessage
+              id="contact.email"
+              defaultMessage="Your Email Address:"
+            />
+          </label>
 
-            <tr>
-              <td>
-                <label>
-                  <FormattedMessage
-                    id="contact.message"
-                    defaultMessage="Message:"
-                  />
-                </label>
-              </td>
-              <td>
-                <textarea
-                  cols={32}
-                  rows={10}
-                />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+          <input
+            type="email"
+          />
+        </div>
+
+        <div className="field">
+            <label>
+              <FormattedMessage
+                id="contact.subject"
+                defaultMessage="Subject:"
+              />
+            </label>
+
+            <input
+              size={30}
+              type="text"
+            />
+        </div>
+
+        <div className="field">
+            <label>
+              <FormattedMessage
+                id="contact.message"
+                defaultMessage="Message:"
+              />
+            </label>
+
+            <textarea
+              cols={32}
+              rows={10}
+            />
+
+        </div>
 
         <input
           type="submit"

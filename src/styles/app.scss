@@ -89,6 +89,11 @@ div.header {
       text-decoration: none;
       margin: 0px 5px 0px 10px;
       padding: 2px;
+
+      &:hover {
+        background : #B7B7B7;
+        border-color : #909090 #D9D9D9 #D9D9D9 #909090;
+      }
     }
   }
 
@@ -104,10 +109,6 @@ div.header {
   }
 }
 
-div.menu a:hover {
-  background : #B7B7B7;
-  border-color : #909090 #D9D9D9 #D9D9D9 #909090;
-}
 
 div.footer {
   text-align : center;
@@ -144,4 +145,17 @@ ul.unmarked {
 p.comment {
   margin-left: 5pt;
   font-style: italic;
+}
+
+div.contact {
+  div.field {
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  input[type=submit] {
+    width: 100%;
+  }
 }
