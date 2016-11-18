@@ -114,7 +114,7 @@ export default function Courses() {
         year={2011}
       >
         <Class
-          defaultName="Fundamentals of Artificial Intelligance"
+          defaultName="Fundamentals of Artificial Intelligence"
           masters={true}
           nameId="courses.fundamentals-of-ai"
           teacher="Carole Hafner"
