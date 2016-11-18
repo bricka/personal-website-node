@@ -15,7 +15,7 @@ const messages = {
     'menu.home': 'Startseit',
     'menu.resume': 'Lebenslauf',
     'menu.courses': 'Klassen',
-    'menu.projects': 'Projekten',
+    'menu.projects': 'Projekte',
     'menu.contact': 'Kontakt',
 
     'resume.my-resume-is-available': 'Mein Lebenslauf ist am Link:',
