@@ -18,9 +18,9 @@ const messages = {
     'menu.projects': 'Projekte',
     'menu.contact': 'Kontakt',
 
-    'resume.my-resume-is-available': 'Mein Lebenslauf ist am Link:',
-    'resume.my-resume.en': 'Mein Lebenslauf (Amerikan)',
-    'resume.my-resume.de-en': 'Mein Lebenslauf (Deutsch-Stil, Englisch)',
+    'resume.my-resume-is-available': 'Mein Lebenslauf ist an dieser Links:',
+    'resume.my-resume.en': 'Amerikanisch, Englisch',
+    'resume.my-resume.de-en': 'Deutsch-Stil, Englisch',
 
     'spring': 'Frühling',
     'fall': 'Herbst',
