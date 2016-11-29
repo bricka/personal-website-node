@@ -21,6 +21,8 @@ const messages = {
     'resume.my-resume-is-available': 'Mein Lebenslauf ist an dieser Links:',
     'resume.my-resume.en': 'Amerikanisch, Englisch',
     'resume.my-resume.de-en': 'Deutsch-Stil, Englisch',
+    'resume.linkedin': 'Sie können mich auch {profileLink} finden',
+    'resume.linkedin-profile': 'auf LinkedIn',
 
     'spring': 'Frühling',
     'fall': 'Herbst',

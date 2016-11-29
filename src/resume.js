@@ -40,6 +40,23 @@ export default class Resume extends Component {
 
       {this._links()}
 
+      <p>
+        <FormattedMessage
+          id="resume.linkedin"
+          defaultMessage="You may also see my {profileLink}"
+          values={{
+            profileLink: (
+              <a href="http://www.linkedin.com/in/alex-brick-45406a6">
+                <FormattedMessage
+                  id="resume.linkedin-profile"
+                  defaultMessage="profile on LinkedIn"
+                />
+              </a>
+            )
+          }}
+        />
+      </p>
+
     </div>
   );
 
