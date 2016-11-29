@@ -20,7 +20,7 @@ const messages = {
 
     'resume.my-resume-is-available': 'Mein Lebenslauf ist am Link:',
     'resume.my-resume.en': 'Mein Lebenslauf (Amerikan)',
-    'resume.my-resume.de': 'Mein Lebenslauf (Deutsch)',
+    'resume.my-resume.de-en': 'Mein Lebenslauf (Deutsch-Stil, Englisch)',
 
     'spring': 'Frühling',
     'fall': 'Herbst',
