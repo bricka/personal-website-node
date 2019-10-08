@@ -95,6 +95,13 @@ class Class extends Component {
 export default function Courses() {
   return (
     <div>
+      <p>
+        <FormattedMessage
+        id="courses.introduction"
+        defaultMessage="These are the courses that I took in university."
+        />
+      </p>
+
       <ul className="unmarked">
         <li>* &ndash;
           <FormattedMessage

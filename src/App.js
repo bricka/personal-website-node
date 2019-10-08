@@ -23,15 +23,15 @@ import Resume from './resume';
 
 const messages = {
   de: {
-    'menu.home': 'Startseit',
+    'menu.home': 'Startseite',
     'menu.resume': 'Lebenslauf',
     'menu.courses': 'Klassen',
     'menu.projects': 'Projekte',
     'menu.contact': 'Kontakt',
 
-    'resume.my-resume-is-available': 'Mein Lebenslauf ist an dieser Links:',
-    'resume.my-resume.en': 'Amerikanisch, Englisch',
-    'resume.my-resume.de-en': 'Deutsch-Stil, Englisch',
+    'resume.my-resume-is-available': 'Mein Lebenslauf ist an diesen Links verfügbar:',
+    'resume.my-resume.en': 'Im amerikanischen Stil, auf Englisch',
+    'resume.my-resume.de-en': 'Im deutschen Stil, auf Englisch',
     'resume.linkedin': 'Sie können mich auch {profileLink} finden',
     'resume.linkedin-profile': 'auf LinkedIn',
 
@@ -42,9 +42,9 @@ const messages = {
 
     ...coursesDe,
 
-    'projects.overview': 'Ich habe an mehreren persönliche Projekten gearbeitet.  Sie können einige auf {myGithubPage} finden.  Einige meiner Favoriten sind hier:',
+    'projects.overview': 'Ich habe an mehreren persönlichen Projekten gearbeitet.  Sie können einige auf {myGithubPage} finden.  Einige meiner Favoriten sind hier:',
     'projects.my-github-page': 'meiner Seite von GitHub',
-    'projects.mips-vim': 'MIPS Syntax-Hervoerhebung für Vim',
+    'projects.mips-vim': 'MIPS Syntax-Highlighting für Vim',
     'projects.personal-website': 'Persönliche Website',
 
     'contact.how-to-reach': 'Sie können mir unter {email} schreiben'

@@ -1,4 +1,6 @@
 {
+  "courses.introduction": "Hier sind die Kurse, die ich in der Universität nahm.",
+  
   "semester.comment.amazon-coop": "Praktikum bei Amazon.com",
   "semester.comment.jf-oberlin": "Studierte an J.F. Oberlin University in Machida, Tokio, Japan",
 
@@ -6,7 +8,7 @@
   "courses.phd-level": "bezeichnet einen PhD-Level-Kurs",
   "courses.fundamentals-of-ai": "Grundlagen von Künstlicher Intelligenz",
   "courses.network-security": "Netzwerksicherheit",
-  "courses.directed-study-dmtcp-openmpi": "Gerichtet Studie (DMTCP/OpenMPI)",
+  "courses.directed-study-dmtcp-openmpi": "Gerichtete Studie (DMTCP/OpenMPI)",
   "courses.mobile-application-development": "Mobile Applikation Entwicklung",
   "courses.group-theory": "Gruppentheorie",
   "courses.computers-and-society": "Computers und Gesellschaft",
@@ -19,9 +21,9 @@
   "courses.research-hpc": "Forschung von Hochleistungsrechnen",
   "courses.algorithms": "Algorithmen",
   "courses.japanese-literature": "Japanische Literatur und Kultur",
-  "couses.gpu-programming": "Allgemeine GPU Programmierung",
+  "courses.gpu-programming": "Allgemeine GPU Programmierung",
   "courses.compilers": "Compilers",
-  "courses.directed-study-dmtcp": "Gerichtet Studie (DMTCP)",
+  "courses.directed-study-dmtcp": "Gerichtete Studie (DMTCP)",
   "courses.probability": "Probabilität und Statistik",
   "courses.theory-of-computation": "Theorie der Berechnung",
   "courses.computer-organization": "Computer-Organisation",
@@ -29,12 +31,12 @@
   "courses.symbolic-logic": "Symbolische Logik",
   "courses.linear-algebra": "Lineare Algebra",
   "courses.calculus-3": "Infinitesimalrechnung für Wissenschaft und Ingenieurwesen 3",
-  "courses.freshman-seminar": "Ehrt Seminar von Erstem Jahr",
+  "courses.freshman-seminar": "Computer Science Seminar für Erstsemester",
   "courses.directed-study-acl2": "Gerichtet Studie (ACL2)",
   "courses.object-oriented": "Objektorientiertes Design",
   "courses.cs-is": "Übersicht CS/IS",
   "courses.fundies-1": "Grundlagen der Informatik 1",
-  "courses.philosophy": "Ehrungen Einführung in die Philosophie",
+  "courses.philosophy": "Einführung in die Philosophie",
   "courses.discrete-math": "Diskrete Mathematik",
   "courses.calculus-2": "Infinitesimalrechnung für Wissenschaft und Ingenieurwesen 2"
 }
