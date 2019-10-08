@@ -77,9 +77,6 @@ class App extends Component {
               <Route path="/courses">
                 <Courses currentLanguage={this.props.currentLanguage}/>
               </Route>
-              <Route path="/projects">
-                <Projects currentLanguage={this.props.currentLanguage}/>
-              </Route>
               <Route path="/projects/mips-vim">
                 <MipsVimHighlightingProject currentLanguage={this.props.currentLanguage}/>
               </Route>
@@ -88,6 +85,9 @@ class App extends Component {
               </Route>
               <Route path="/projects/personal-website">
                 <PersonalWebsiteProject currentLanguage={this.props.currentLanguage}/>
+              </Route>
+              <Route path="/projects">
+                <Projects currentLanguage={this.props.currentLanguage}/>
               </Route>
               <Route path="/contact">
                 <Contact currentLanguage={this.props.currentLanguage}/>
