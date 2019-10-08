@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import PersonalWebsiteProjectDeutsch from './personal_website_deutsch';
 import PersonalWebsiteProjectEnglish from './personal_website_english';

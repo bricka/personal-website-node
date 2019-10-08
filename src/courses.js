@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import { FormattedMessage } from 'react-intl';
 
@@ -66,7 +67,7 @@ class Class extends Component {
   static propTypes = {
     defaultName: PropTypes.string.isRequired,
     masters: PropTypes.bool,
-    nameId: PropTypes.string.isRequired,
+    nameId: PropTypes.string,
     phd: PropTypes.bool,
     teacher: PropTypes.string
   };
@@ -94,7 +95,7 @@ class Class extends Component {
 export default function Courses() {
   return (
     <div>
-      <ul class="unmarked">
+      <ul className="unmarked">
         <li>* &ndash;
           <FormattedMessage
             id="courses.masters-level"

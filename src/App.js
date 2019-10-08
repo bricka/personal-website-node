@@ -1,14 +1,25 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './styles/app.scss';
 
 import Header from './header';
 import { IntlProvider } from 'react-intl';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import { compose, withProps, withState } from 'recompose';
 
 import Cookies from 'cookies-js';
 
 import coursesDe from './courses.de';
+
+import Contact from './contact';
+import Courses from './courses';
+import GilesProject from './projects/giles';
+import Home from './home';
+import MipsVimHighlightingProject from './projects/mips_vim';
+import PersonalWebsiteProject from './projects/personal_website';
+import Projects from './projects';
+import Resume from './resume';
 
 const messages = {
   de: {
@@ -47,21 +58,48 @@ class App extends Component {
   };
 
   render = () => (
-    <IntlProvider
-      locale={this.props.currentLanguage}
-      messages={messages[this.props.currentLanguage]}
-    >
-      <div className="app">
-        <Header
-          currentLanguage={this.props.currentLanguage}
-          onLanguageChange={this.props.onLanguageChange}
-        />
+    <BrowserRouter>
+      <IntlProvider
+        locale={this.props.currentLanguage}
+        messages={messages[this.props.currentLanguage]}
+      >
+        <div className="app">
+          <Header
+            currentLanguage={this.props.currentLanguage}
+            onLanguageChange={this.props.onLanguageChange}
+          />
 
-        <div className="body">
-          {React.cloneElement(this.props.children, { currentLanguage: this.props.currentLanguage })}
+          <div className="body">
+            <Switch>
+              <Route path="/resume">
+                <Resume currentLanguage={this.props.currentLanguage}/>
+              </Route>
+              <Route path="/courses">
+                <Courses currentLanguage={this.props.currentLanguage}/>
+              </Route>
+              <Route path="/projects">
+                <Projects currentLanguage={this.props.currentLanguage}/>
+              </Route>
+              <Route path="/projects/mips-vim">
+                <MipsVimHighlightingProject currentLanguage={this.props.currentLanguage}/>
+              </Route>
+              <Route path="/projects/giles">
+                <GilesProject currentLanguage={this.props.currentLanguage}/>
+              </Route>
+              <Route path="/projects/personal-website">
+                <PersonalWebsiteProject currentLanguage={this.props.currentLanguage}/>
+              </Route>
+              <Route path="/contact">
+                <Contact currentLanguage={this.props.currentLanguage}/>
+              </Route>
+              <Route path="/">
+                <Home currentLanguage={this.props.currentLanguage}/>
+              </Route>
+            </Switch>
+          </div>
         </div>
-      </div>
-    </IntlProvider>
+      </IntlProvider>
+    </BrowserRouter>
   );
 }
 

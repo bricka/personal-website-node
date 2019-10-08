@@ -1,9 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import { FormattedMessage } from 'react-intl';
 
 const americanLink = (
-  <p>
+  <p key="resume-us">
     <a href="/resume.pdf">
       <FormattedMessage
         id="resume.my-resume.en"
@@ -14,7 +15,7 @@ const americanLink = (
 );
 
 const germanEnLink = (
-  <p>
+  <p key="resume-de">
     <a href="/resume-de-en.pdf">
       <FormattedMessage
         id="resume.my-resume.de-en"

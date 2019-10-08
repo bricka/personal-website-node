@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import MipsSyntaxHighlightingProjectDeutsch from './mips_vim_deutsch';
 import MipsSyntaxHighlightingProjectEnglish from './mips_vim_english';

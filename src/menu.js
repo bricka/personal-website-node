@@ -1,23 +1,24 @@
 import React from 'react';
 
 import { FormattedMessage } from 'react-intl';
-import { IndexLink, Link } from 'react-router';
+import { NavLink } from 'react-router-dom';
 
 const ACTIVE_CLASS_NAME = 'selectedMenuItem';
 
 export default function Menu() {
   return (
     <div className="menu">
-      <IndexLink
+      <NavLink
         activeClassName={ACTIVE_CLASS_NAME}
+        exact
         to="/"
       >
         <FormattedMessage
           id="menu.home"
           defaultMessage="Home"
         />
-      </IndexLink>
-      <Link
+      </NavLink>
+      <NavLink
         activeClassName={ACTIVE_CLASS_NAME}
         to="/resume"
       >
@@ -25,8 +26,8 @@ export default function Menu() {
           id="menu.resume"
           defaultMessage="Resume"
         />
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         activeClassName={ACTIVE_CLASS_NAME}
         to="/courses"
       >
@@ -34,8 +35,8 @@ export default function Menu() {
           id="menu.courses"
           defaultMessage="Courses"
         />
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         activeClassName={ACTIVE_CLASS_NAME}
         to="/projects"
       >
@@ -43,8 +44,8 @@ export default function Menu() {
           id="menu.projects"
           defaultMessage="Projects"
         />
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         activeClassName={ACTIVE_CLASS_NAME}
         to="/contact"
       >
@@ -52,7 +53,7 @@ export default function Menu() {
           id="menu.contact"
           defaultMessage="Contact"
         />
-      </Link>
+      </NavLink>
     </div>
   );
 }
