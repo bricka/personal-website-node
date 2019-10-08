@@ -93,6 +93,6 @@
     "extends": "react-app"
   },
   "engines": {
-    "node": "7.1.0"
+    "node": "12.x"
   }
 }
