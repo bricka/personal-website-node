@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 
 import { FormattedMessage } from 'react-intl';
 
+import germanResumePath from './resume-de-en.pdf';
+import americanResumePath from './resume.pdf';
+
 const americanLink = (
   <p key="resume-us">
-    <a href="/resume.pdf">
+    <a href={americanResumePath}>
       <FormattedMessage
         id="resume.my-resume.en"
         defaultMessage="American-style, English"
@@ -16,7 +19,7 @@ const americanLink = (
 
 const germanEnLink = (
   <p key="resume-de">
-    <a href="/resume-de-en.pdf">
+    <a href={germanResumePath}>
       <FormattedMessage
         id="resume.my-resume.de-en"
         defaultMessage="German-style, English"
