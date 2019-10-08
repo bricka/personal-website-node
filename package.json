@@ -5,7 +5,7 @@
   "devDependencies": {
     "autoprefixer": "6.5.1",
     "babel-core": "6.17.0",
-    "babel-eslint": "7.0.0",
+    "babel-eslint": "^7.0.0",
     "babel-jest": "16.0.0",
     "babel-loader": "6.2.5",
     "babel-preset-react-app": "^1.0.0",
@@ -16,7 +16,7 @@
     "css-loader": "0.25.0",
     "detect-port": "1.0.1",
     "dotenv": "2.0.0",
-    "eslint": "3.8.1",
+    "eslint": "^3.8.1",
     "eslint-config-react-app": "^0.3.0",
     "eslint-loader": "1.6.0",
     "eslint-plugin-flowtype": "2.21.0",
@@ -50,17 +50,20 @@
   },
   "dependencies": {
     "cookies-js": "^1.2.3",
-    "node-sass": "^3.11.3",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
-    "react-intl": "^2.1.5",
-    "react-router": "^3.0.0",
-    "recompose": "^0.20.2",
+    "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-intl": "^3.3.2",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "recompose": "^0.30.0",
     "sass-loader": "^4.0.2"
   },
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "lint": "eslint src/",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
