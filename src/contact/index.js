@@ -10,7 +10,7 @@ export default function Contact() {
           id="contact.how-to-reach"
           defaultMessage="You can reach me at {email}"
           values={{
-            email: <a href="mailto:alex@alexrbrick.com">alex@alexrbrick.com</a>
+            email: <a href="mailto:alex@alexbrick.me">alex@alexbrick.me</a>
           }}
         />
       </p>
