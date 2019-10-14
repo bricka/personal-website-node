@@ -5,9 +5,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'production',
 
+  devtool: 'source-map',
+
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/',
+  },
+
+  resolve: {
+    extensions: [ '.ts' ]
   },
 
   module: {
