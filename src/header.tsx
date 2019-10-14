@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
 
 import Language from './language';
 import Menu from './menu';
 
-export default class Header extends Component {
-  static propTypes = {
-    currentLanguage: PropTypes.string.isRequired,
-    onLanguageChange: PropTypes.func.isRequired
-  };
+interface Props {
+  currentLanguage: string;
+  onLanguageChange: (language: string) => void;
+}
 
-  render = () => (
+export default function Header(props: Props) {
+  return (
     <div className="header">
       <div className="title">
         <h1>Alex Brick</h1>
@@ -19,8 +18,8 @@ export default class Header extends Component {
       <Menu/>
 
       <Language
-        currentLanguage={this.props.currentLanguage}
-        onLanguageChange={this.props.onLanguageChange}
+        currentLanguage={props.currentLanguage}
+        onLanguageChange={props.onLanguageChange}
       />
     </div>
   );
