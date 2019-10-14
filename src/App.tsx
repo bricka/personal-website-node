@@ -4,8 +4,6 @@ import './styles/app.scss';
 import { IntlProvider } from 'react-intl';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import { compose, withProps, withState } from 'recompose';
-
 import Cookies from 'cookies-js';
 
 import coursesDe from './courses.de';
@@ -50,64 +48,56 @@ const messages: {[language: string]: any} = {
   },
 };
 
-interface Props {
-  currentLanguage: string;
-  onLanguageChange: (language: string) => void;
-}
+export default function App() {
+  const [currentLanguage, setCurrentLanguage] = React.useState(Cookies.get('currentLanguage') || 'en');
 
-class App extends React.Component<Props> {
-  public render = () => (
+  const onLanguageChange = (language: string) => {
+      Cookies.set('currentLanguage', language);
+      setCurrentLanguage(language);
+  };
+
+  return (
     <BrowserRouter>
       <IntlProvider
-        locale={this.props.currentLanguage}
-        messages={messages[this.props.currentLanguage]}
+        locale={currentLanguage}
+        messages={messages[currentLanguage]}
       >
         <div className="app">
           <Header
-            currentLanguage={this.props.currentLanguage}
-            onLanguageChange={this.props.onLanguageChange}
+            currentLanguage={currentLanguage}
+            onLanguageChange={onLanguageChange}
           />
 
           <div className="body">
             <Switch>
               <Route path="/resume">
-                <Resume currentLanguage={this.props.currentLanguage}/>
+                <Resume currentLanguage={currentLanguage}/>
               </Route>
               <Route path="/courses">
-                <Courses currentLanguage={this.props.currentLanguage}/>
+                <Courses currentLanguage={currentLanguage}/>
               </Route>
               <Route path="/projects/mips-vim">
-                <MipsVimHighlightingProject currentLanguage={this.props.currentLanguage}/>
+                <MipsVimHighlightingProject currentLanguage={currentLanguage}/>
               </Route>
               <Route path="/projects/giles">
-                <GilesProject currentLanguage={this.props.currentLanguage}/>
+                <GilesProject currentLanguage={currentLanguage}/>
               </Route>
               <Route path="/projects/personal-website">
-                <PersonalWebsiteProject currentLanguage={this.props.currentLanguage}/>
+                <PersonalWebsiteProject currentLanguage={currentLanguage}/>
               </Route>
               <Route path="/projects">
-                <Projects currentLanguage={this.props.currentLanguage}/>
+                <Projects currentLanguage={currentLanguage}/>
               </Route>
               <Route path="/contact">
-                <Contact currentLanguage={this.props.currentLanguage}/>
+                <Contact currentLanguage={currentLanguage}/>
               </Route>
               <Route path="/">
-                <Home currentLanguage={this.props.currentLanguage}/>
+                <Home currentLanguage={currentLanguage}/>
               </Route>
             </Switch>
           </div>
         </div>
       </IntlProvider>
     </BrowserRouter>
-  )
+  );
 }
-
-export default compose(
-  withState('currentLanguage', 'setCurrentLanguage', Cookies.get('currentLanguage') || 'en'),
-  withProps(({ setCurrentLanguage }) => ({
-    onLanguageChange: l => {
-      Cookies.set('currentLanguage', l);
-      setCurrentLanguage(l);
-    },
-  }))
-)(App);
