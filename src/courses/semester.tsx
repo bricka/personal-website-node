@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { FormattedMessage } from 'react-intl';
 
-enum Season {
+export enum Season {
   FALL = 'fall',
   SPRING = 'spring',
   SUMMER1 = 'summer-1',
@@ -10,7 +10,7 @@ enum Season {
 }
 
 interface Props {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   commentId?: string;
   defaultComment?: string;
   seasonId: Season;

@@ -2,10 +2,8 @@ import * as React from 'react';
 
 import { FormattedMessage } from 'react-intl';
 
-const SPRING = 'spring';
-const FALL = 'fall';
-const SUMMER2_FALL = 'summer2-fall';
-const SUMMER1 = 'summer-1';
+import { Course, CourseLevel } from './course';
+import { Season, Semester } from './semester';
 
 export default function Courses() {
   return (
@@ -33,18 +31,18 @@ export default function Courses() {
       </ul>
 
       <Semester
-        seasonId={SPRING}
+        seasonId={Season.SPRING}
         year={2011}
       >
-        <Class
+        <Course
           defaultName="Fundamentals of Artificial Intelligence"
-          masters={true}
+          level={CourseLevel.MASTER}
           nameId="courses.fundamentals-of-ai"
           teacher="Carole Hafner"
         />
-        <Class
+        <Course
           defaultName="Network Security"
-          masters={true}
+          level={CourseLevel.MASTER}
           nameId="courses.network-security"
           teacher="Ravi Sundaram"
         />
@@ -53,21 +51,21 @@ export default function Courses() {
       <Semester
         commentId="semester.comment.amazon-coop"
         defaultComment="On co-op with Amazon.com"
-        seasonId={SUMMER2_FALL}
+        seasonId={Season.SUMMER2_FALL}
         year={2010}
       />
 
       <Semester
-        seasonId={SUMMER1}
+        seasonId={Season.SUMMER1}
         year={2010}
       >
-        <Class
+        <Course
           defaultName="Directed Study (DMTCP/OpenMPI)"
-          masters={true}
+          level={CourseLevel.MASTER}
           nameId="courses.directed-study-dmtcp-openmpi"
           teacher="Gene Cooperman"
         />
-        <Class
+        <Course
           defaultName="Mobile Application Development"
           nameId="courses.mobile-application-development"
           teacher="Pong Choa"
@@ -75,26 +73,26 @@ export default function Courses() {
       </Semester>
 
       <Semester
-        seasonId={SPRING}
+        seasonId={Season.SPRING}
         year={2010}
       >
-        <Class
+        <Course
           defaultName="Group Theory"
           nameId="courses.group-theory"
           teacher="Anthony Iarrobino"
         />
-        <Class
+        <Course
           defaultName="Computers and Society"
           nameId="courses.computers-and-society"
           teacher="Judith Perrolle"
         />
-        <Class
+        <Course
           defaultName="Intensive Operating Systems"
+          level={CourseLevel.PHD}
           nameId="courses.intensive-operating-systems"
-          phd={true}
           teacher="Peter Desnoyers"
         />
-        <Class
+        <Course
           defaultName="Software Development"
           nameId="courses.software-development"
           teacher="William Clinger"
@@ -104,26 +102,25 @@ export default function Courses() {
       <Semester
         commentId="semester.comment.jf-oberlin"
         defaultComment="Studying abroad at J.F. Oberlin University in Machida, Tokyo, Japan"
-        seasonId={FALL}
+        seasonId={Season.FALL}
         year={2009}
       >
-        <Class defaultName="本語 II-B (Japanese II-B)" />
-        <Class defaultName="日本の神話学 (Japanese Mythology)" />
-        <Class defaultName="経験の日本語 (Experiential Japanese)" />
-        <Class defaultName="漢字 I (Kanji I)" />
+        <Course defaultName="本語 II-B (Japanese II-B)" />
+        <Course defaultName="日本の神話学 (Japanese Mythology)" />
+        <Course defaultName="経験の日本語 (Experiential Japanese)" />
+        <Course defaultName="漢字 I (Kanji I)" />
       </Semester>
 
       <Semester
-        name="Summer 1 2009"
-        seasonId={SUMMER1}
+        seasonId={Season.SUMMER1}
         year={2009}
       >
-        <Class
+        <Course
           defaultName="Physics 2 for Engineers"
           nameId="courses.physics-2"
           teacher="Henry Smith"
         />
-        <Class
+        <Course
           defaultName="Public Policy and Administration"
           nameId="courses.public-policy"
           teacher="Michael Dukakis"
@@ -131,27 +128,27 @@ export default function Courses() {
       </Semester>
 
       <Semester
-        seasonId={SPRING}
+        seasonId={Season.SPRING}
         year={2009}
       >
-        <Class
+        <Course
           defaultName="Physics 1 for Engineers"
           nameId="courses.physics-1"
           teacher="Henry Smith"
         />
-        <Class
+        <Course
           defaultName="Writing for the Technical Professions"
           nameId="courses.writing-technical"
           teacher="Tom Akbari"
         />
-        <Class
+        <Course
           defaultName="Research in High-Performance Computing"
-          masters={true}
+          level={CourseLevel.MASTER}
           nameId="courses.research-hpc"
           teacher="Gene Cooperman"
         />
-        <Class
-          masters={true}
+        <Course
+          level={CourseLevel.MASTER}
           defaultName="Algorithms"
           nameId="courses.algorithms"
           teacher="Virgil Pavlu"
@@ -161,31 +158,31 @@ export default function Courses() {
       <Semester
         commentId="semester.comment.amazon-coop"
         defaultComment="On co-op with Amazon.com"
-        seasonId={SUMMER2_FALL}
+        seasonId={Season.SUMMER2_FALL}
         year={2008}
       />
 
       <Semester
-        seasonId={SPRING}
+        seasonId={Season.SPRING}
         year={2008}
       >
-        <Class
+        <Course
           defaultName="Japanese Literature and Culture"
           nameId="courses.japanese-literature"
           teacher="Tom Havens"
         />
-        <Class
+        <Course
           defaultName="General Purpose GPU Programming"
           nameId="courses.gpu-programming"
           teacher="Gene Cooperman"
         />
-        <Class
-          masters={true}
+        <Course
+          level={CourseLevel.MASTER}
           defaultName="Compilers"
           nameId="courses.compilers"
           teacher="Jesse Tov"
         />
-        <Class
+        <Course
           defaultName="Directed Study (DMTCP)"
           nameId="courses.directed-study-dmtcp"
           teacher="Gene Cooperman"
@@ -193,26 +190,26 @@ export default function Courses() {
       </Semester>
 
       <Semester
-        seasonId={FALL}
+        seasonId={Season.FALL}
         year={2007}
       >
-        <Class
+        <Course
           defaultName="Probability and Statistics"
           nameId="courses.probability"
           teacher="Aidong Ding"
         />
-        <Class
+        <Course
           defaultName="Theory of Computation"
           nameId="courses.theory-of-computation"
           teacher="Viera Proulx"
         />
-        <Class
+        <Course
           defaultName="Computer Organization"
           nameId="courses.computer-organization"
           teacher="Gene Cooperman"
         />
-        <Class
-          masters={true}
+        <Course
+          level={CourseLevel.MASTER}
           defaultName="Principles of Programming Languages"
           nameId="courses.principles-of-pl"
           teacher="Karl Lieberherr"
@@ -220,40 +217,40 @@ export default function Courses() {
       </Semester>
 
       <Semester
-        seasonId={SPRING}
+        seasonId={Season.SPRING}
         year={2007}
       >
-        <Class
+        <Course
           defaultName="Symbolic Logic"
           nameId="courses.symbolic-logic"
           teacher="Michael Meyer"
         />
-        <Class
+        <Course
           defaultName="Linear Algebra"
           nameId="courses.linear-algebra"
           teacher="Eugene Gover"
         />
-        <Class
+        <Course
           defaultName="Calculus 3 for Science / Engineering"
           nameId="courses.calculus-3"
           teacher="Robert Lupi"
         />
-        <Class
+        <Course
           defaultName="Honors Freshman Seminar"
           nameId="courses.freshman-seminar"
           teacher="Richard Rasala"
         />
-        <Class
+        <Course
           defaultName="Directed Study (ACL2)"
           nameId="courses.directed-study-acl2"
           teacher="Dale Vaillancourt"
         />
-        <Class
+        <Course
           defaultName="Object-Oriented Design"
           nameId="courses.object-oriented"
           teacher="Carole Hafner"
         />
-        <Class
+        <Course
           defaultName="CS/IS Overview"
           nameId="courses.cs-is"
           teacher="Melvin Simms"
@@ -261,35 +258,35 @@ export default function Courses() {
       </Semester>
 
       <Semester
-        seasonId={FALL}
+        seasonId={Season.FALL}
         year={2006}
       >
-        <Class
+        <Course
           defaultName="Fundamentals of Computer Science 1"
           nameId="courses.fundies-1"
           teacher="Matthias Felleisen"
         />
-        <Class
+        <Course
           defaultName="Honors Introduction to Philosophy"
           nameId="courses.philosophy"
           teacher="William DeAngelis"
         />
-        <Class
+        <Course
           defaultName="Discrete Mathematics"
           nameId="courses.discrete-math"
           teacher="Javed Aslam"
         />
-        <Class
+        <Course
           defaultName="Calculus 2 for Science / Engineering"
           nameId="courses.calculus-2"
           teacher="Robert Lupi"
         />
-        <Class
+        <Course
           defaultName="Honors Freshman Seminar"
           nameId="courses.freshman-seminar"
           teacher="Richard Rasala"
         />
-        <Class
+        <Course
           defaultName="CS/IS Overview"
           nameId="courses.cs-is"
           teacher="Melvin Simms"

@@ -2,20 +2,19 @@ import * as React from 'react';
 
 import { FormattedMessage } from 'react-intl';
 
-enum CourseLevel {
-  BACHELOR = 'bachelor',
+export enum CourseLevel {
   MASTER = 'master',
   PHD = 'phd',
 }
 
 interface Props {
   defaultName: string;
-  level: CourseLevel;
+  level?: CourseLevel;
   nameId?: string;
   teacher?: string;
 }
 
-function signForCourse(level: CourseLevel) {
+function signForCourse(level?: CourseLevel) {
   switch (level) {
     case CourseLevel.MASTER:
       return '*';
