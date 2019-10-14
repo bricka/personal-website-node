@@ -4,7 +4,7 @@ export default function MipsVimHighlightingProjectEnglish() {
   return (
     <div>
       <p>
-        I am a rabid fan of the Vim text editor. However, while taking Computer Organization in my sophomore year of college, I realized that Vim did not support MIPS, the Assembly language that we were using in class. Sure it supports GNU Assembly and some other sorts that work somewhat acceptably for MIPS, but I didn't love them. And so I took it upon myself to produce such a syntax highlighting file. The result can be found here.
+        I am a rabid fan of the Vim text editor. However, while taking Computer Organization in my sophomore year of college, I realized that Vim did not support MIPS, the Assembly language that we were using in class. Sure it supports GNU Assembly and some other sorts that work somewhat acceptably for MIPS, but I didn&apos;t love them. And so I took it upon myself to produce such a syntax highlighting file. The result can be found here.
       </p>
 
       <p>

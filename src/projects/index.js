@@ -3,7 +3,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 
-export default () => (
+const Projects = () => (
   <div>
     <p>
       <FormattedMessage
@@ -47,3 +47,5 @@ export default () => (
     </ul>
   </div>
 );
+
+export default Projects;

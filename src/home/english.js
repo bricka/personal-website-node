@@ -8,7 +8,7 @@ export default function HomeEnglish() {
       </p>
 
       <p>
-        My interest in computers began many, many years ago, at the ripe age of 10.  I can still remember my first number guessing game that drew me into this complex world of interactive and powerful software.  Of course, it also had no loops, no flow control, or anything.  Just if statements and function calls.  Maybe it wasn't such a great program after all...
+        My interest in computers began many, many years ago, at the ripe age of 10.  I can still remember my first number guessing game that drew me into this complex world of interactive and powerful software.  Of course, it also had no loops, no flow control, or anything.  Just if statements and function calls.  Maybe it wasn&apos;t such a great program after all...
       </p>
 
       <p>
