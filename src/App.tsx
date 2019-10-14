@@ -89,7 +89,7 @@ export default function App() {
                 <Projects currentLanguage={currentLanguage}/>
               </Route>
               <Route path="/contact">
-                <Contact currentLanguage={currentLanguage}/>
+                <Contact/>
               </Route>
               <Route path="/">
                 <Home currentLanguage={currentLanguage}/>
