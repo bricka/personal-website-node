@@ -1,59 +1,57 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
 
-const languages = [
+interface Language {
+  locale: string;
+  name: string;
+}
+
+const languages: Language[] = [
   {
     locale: 'en',
-    name: 'English'
+    name: 'English',
   },
   {
     locale: 'de',
-    name: 'Deutsch'
-  }
+    name: 'Deutsch',
+  },
 ];
 
-export default class LanguageSelector extends Component {
-  static propTypes = {
-    currentLanguage: PropTypes.string.isRequired,
-    onLanguageChange: PropTypes.func.isRequired
-  };
+interface Props {
+  currentLanguage: string;
+  onLanguageChange: (language: string) => void;
+}
 
-  render = () => (
+export default class LanguageSelector extends React.Component<Props> {
+  public render = () => (
     <div className="language-selector">
       Language:&nbsp;
       <span className="language-options">
-        {this._renderLanguageOptions()}
+        {this.renderLanguageOptions()}
       </span>
     </div>
-  );
+  )
 
-  _renderLanguageOptions = () => languages.map((l, i) => {
-    if (i === 0) {
-      return this._languageOption(l, l.locale);
-    }
+  private renderLanguageOptions = () => languages.map(l => this.languageOption(l)).join(' / ');
 
-    return <span key={l.locale}> / {this._languageOption(l)}</span>;
-  });
-
-  _languageOption = ({ name, locale }, key) => {
+  private languageOption = ({ name, locale }: Language) => {
     if (this.props.currentLanguage === locale) {
       return (
-        <span className="current-language" key={key}>{name}</span>
+        <span className="current-language" key={locale}>{name}</span>
       );
     } else {
       return (
         <a
           href="#"
-          key={key}
-          onClick={this._getHandlerForLanguageClick(locale)}
+          key={locale}
+          onClick={this.getHandlerForLanguageClick(locale)}
         >
           {name}
         </a>
       );
     }
-  };
+  }
 
-  _getHandlerForLanguageClick = language => e => {
+  private getHandlerForLanguageClick = (language: string) => (e: React.SyntheticEvent) => {
     e && e.preventDefault();
     this.props.onLanguageChange(language);
   }
