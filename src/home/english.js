@@ -4,7 +4,7 @@ export default function HomeEnglish() {
   return (
     <div>
       <p>
-        My name is Alex Brick, and I am a professional software developer in Seattle, WA, USA.  I currently work for a website called <a href="https://porch.com">Porch.com</a>, where I am a Senior Full Stack Software Engineer.  Prior to that, I worked for <a href="https://amazon.com">Amazon.com</a> for years.
+        My name is Alex Brick, and I am a professional software developer (and sometimes manager) in Munich, Germany.  I enjoy creating tools and software that solve user needs in a satisfying way.
       </p>
 
       <p>
@@ -32,7 +32,11 @@ export default function HomeEnglish() {
       </p>
 
       <p>
-        After graduating from university, I returned to Amazon.com for several years, where I eventually became team lead of the internal Software Deployment team.  And from there, I moved on to Porch, where I work today.
+        After graduating from university, I returned to Amazon.com for several years, where I eventually became team lead of the internal Software Deployment team.  From there, I moved on to Porch, a company that developed software to match homeowners with home improvement professionals. There, I got to focus on frontend development and got to really learn some modern frameworks and focus on making great user experiences.
+      </p>
+      
+      <p>
+        In 2017, I decided to make the move across the Atlantic Ocean to Munich, where I began to work for Definiens AG, a company developing software and techniques for performing image analysis of cancer biopsy slides. There, I got to focus on understanding use cases and doing a lot more of higher-level requirement engineering. I also was involved in modernizing much of the internal software infrastructure, and spent several months working as a manager instead of a software developer, which was an interesting experience.
       </p>
 
       <p>
