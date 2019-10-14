@@ -48,7 +48,6 @@ class Semester extends Component {
 
       {this.props.commentId && (
          <p className="comment">
-           {this.props.comment}
            <FormattedMessage
              id={this.props.commentId}
              defaultMessage={this.props.defaultComment}

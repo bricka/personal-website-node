@@ -8,7 +8,7 @@ export default function HomeDeutsch() {
       </p>
 
       <p>
-        Meine Interesse in Komputern fing vor vielen vielen Jahren an, als ich nur 10-Jähriger war. Ich erinnere mich noch an mein erstes "Nummer-Rat" Spiel. Obwohl das Programm keine Schleifen, keine Ifs, keine nichts hatte. Vielleicht war das allerdings nicht das allerbeste Programm...
+        Meine Interesse in Komputern fing vor vielen vielen Jahren an, als ich nur 10-Jähriger war. Ich erinnere mich noch an mein erstes &quot;Nummer-Rat&quot; Spiel. Obwohl das Programm keine Schleifen, keine Ifs, keine nichts hatte. Vielleicht war das allerdings nicht das allerbeste Programm...
       </p>
 
       <p>
@@ -16,7 +16,7 @@ export default function HomeDeutsch() {
       </p>
 
       <p>
-        In 2006 studierte ich Computer Science bei <a href="http://northeastern.edu">Northeastern University</a> in Boston. Dort arbeitete ich mit der High Performance Computing Group, wo ich an "low-level user-level process checkpointing" arbeitete.
+        In 2006 studierte ich Computer Science bei <a href="http://northeastern.edu">Northeastern University</a> in Boston. Dort arbeitete ich mit der High Performance Computing Group, wo ich an &quot;low-level user-level process checkpointing&quot; arbeitete.
       </p>
 
       <p>
