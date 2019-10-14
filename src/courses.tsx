@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
 
 import { FormattedMessage } from 'react-intl';
 
@@ -7,60 +6,6 @@ const SPRING = 'spring';
 const FALL = 'fall';
 const SUMMER2_FALL = 'summer2-fall';
 const SUMMER1 = 'summer-1';
-
-const seasonIntlData = {
-  [SPRING]: {
-    id: 'spring',
-    defaultMessage: 'Spring'
-  },
-  [FALL]: {
-    id: 'fall',
-    defaultMessage: 'Fall'
-  },
-  [SUMMER2_FALL]: {
-    id: 'summer-2-and-fall',
-    defaultMessage: 'Summer 2 and Fall'
-  },
-  [SUMMER1]: {
-    id: 'summer-1',
-    defaultMessage: 'Summer 1'
-  }
-};
-
-class Semester extends Component {
-  static propTypes = {
-    children: PropTypes.node,
-    commentId: PropTypes.string,
-    defaultComment: PropTypes.string,
-    seasonId: PropTypes.string.isRequired,
-    year: PropTypes.number.isRequired
-  };
-
-  render = () => (
-    <div>
-      <h2>
-        <FormattedMessage
-          {...seasonIntlData[this.props.seasonId]}
-        />
-        &nbsp;
-        {this.props.year}
-      </h2>
-
-      {this.props.commentId && (
-         <p className="comment">
-           <FormattedMessage
-             id={this.props.commentId}
-             defaultMessage={this.props.defaultComment}
-            />
-         </p>
-      )}
-
-      <ul>
-        {this.props.children}
-      </ul>
-    </div>
-  );
-}
 
 class Class extends Component {
   static propTypes = {
