@@ -20,7 +20,7 @@ import MipsVimHighlightingProject from './projects/mips_vim';
 import PersonalWebsiteProject from './projects/personal_website';
 import Resume from './resume';
 
-const messages = {
+const messages: {[language: string]: any} = {
   de: {
     'menu.contact': 'Kontakt',
     'menu.courses': 'Klassen',
@@ -55,8 +55,7 @@ interface Props {
   onLanguageChange: (language: string) => void;
 }
 
-class App extends Component<Props> {
-
+class App extends React.Component<Props> {
   public render = () => (
     <BrowserRouter>
       <IntlProvider
