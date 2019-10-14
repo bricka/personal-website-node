@@ -54,7 +54,7 @@
     "recompose": "^0.30.0"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "webpack-dev-server --config webpack-dev.config.js",
     "build": "webpack",
     "lint": "eslint src/",
     "test": "node scripts/test.js --env=jsdom"
