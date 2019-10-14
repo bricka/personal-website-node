@@ -10,6 +10,7 @@ enum Season {
 }
 
 interface Props {
+  children: React.ReactNode;
   commentId?: string;
   defaultComment?: string;
   seasonId: Season;
@@ -18,21 +19,21 @@ interface Props {
 
 const seasonIntlData = {
   [Season.SPRING]: {
+    defaultMessage: 'Spring',
     id: 'spring',
-    defaultMessage: 'Spring'
   },
   [Season.FALL]: {
+    defaultMessage: 'Fall',
     id: 'fall',
-    defaultMessage: 'Fall'
   },
   [Season.SUMMER2_FALL]: {
+    defaultMessage: 'Summer 2 and Fall',
     id: 'summer-2-and-fall',
-    defaultMessage: 'Summer 2 and Fall'
   },
   [Season.SUMMER1]: {
+    defaultMessage: 'Summer 1',
     id: 'summer-1',
-    defaultMessage: 'Summer 1'
-  }
+  },
 };
 
 export function Semester(props: Props) {
@@ -43,20 +44,20 @@ export function Semester(props: Props) {
           {...seasonIntlData[props.seasonId]}
         />
         &nbsp;
-        {this.props.year}
+        {props.year}
       </h2>
 
-      {this.props.commentId && (
+      {props.commentId && (
          <p className="comment">
            <FormattedMessage
-             id={this.props.commentId}
-             defaultMessage={this.props.defaultComment}
+             id={props.commentId}
+             defaultMessage={props.defaultComment}
             />
          </p>
       )}
 
       <ul>
-        {this.props.children}
+        {props.children}
       </ul>
     </div>
   );
