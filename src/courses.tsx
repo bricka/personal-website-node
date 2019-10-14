@@ -7,35 +7,6 @@ const FALL = 'fall';
 const SUMMER2_FALL = 'summer2-fall';
 const SUMMER1 = 'summer-1';
 
-class Class extends Component {
-  static propTypes = {
-    defaultName: PropTypes.string.isRequired,
-    masters: PropTypes.bool,
-    nameId: PropTypes.string,
-    phd: PropTypes.bool,
-    teacher: PropTypes.string
-  };
-
-  render = () => (
-    <li>
-      <span className="class-name">
-        {this.props.nameId ? (
-          <FormattedMessage
-            id={this.props.nameId}
-            defaultMessage={this.props.defaultName}
-          />
-        ) : (
-          this.props.defaultName
-        )}
-        {this.props.masters && '*'}
-        {this.props.phd && '†'}
-      </span>
-      &nbsp;
-      {this.props.teacher && `(${this.props.teacher})`}
-    </li>
-  );
-}
-
 export default function Courses() {
   return (
     <div>
