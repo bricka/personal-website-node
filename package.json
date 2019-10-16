@@ -34,7 +34,6 @@
     "webpack-dev-server": "^3.8.2"
   },
   "dependencies": {
-    "cookies-js": "^1.2.3",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-intl": "^3.3.2",
