@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
 
 import { FormattedMessage } from 'react-intl';
 
@@ -28,12 +27,21 @@ const germanEnLink = (
   </p>
 );
 
-export default class Resume extends Component {
-  static propTypes = {
-    currentLanguage: PropTypes.string.isRequired
-  };
+interface Props {
+  currentLanguage: string;
+}
 
-  render = () => (
+export default function Resume(props: Props) {
+  function links() {
+    switch(props.currentLanguage) {
+      case 'de':
+        return [ germanEnLink, americanLink ];
+      default:
+        return [ americanLink, germanEnLink ];
+    }
+  }
+
+  return (
     <div>
       <p>
         <FormattedMessage
@@ -42,7 +50,7 @@ export default class Resume extends Component {
         />
       </p>
 
-      {this._links()}
+      {links()}
 
       <p>
         <FormattedMessage
@@ -64,12 +72,4 @@ export default class Resume extends Component {
     </div>
   );
 
-  _links = () => {
-    switch(this.props.currentLanguage) {
-      case 'de':
-        return [ germanEnLink, americanLink ];
-      default:
-        return [ americanLink, germanEnLink ];
-    }
-  };
 }
