@@ -74,7 +74,7 @@ export default function App() {
                 <Resume currentLanguage={currentLanguage}/>
               </Route>
               <Route path="/courses">
-                <Courses currentLanguage={currentLanguage}/>
+                <Courses/>
               </Route>
               <Route path="/projects/mips-vim">
                 <MipsVimHighlightingProject currentLanguage={currentLanguage}/>
