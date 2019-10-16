@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import * as cookies from 'js-cookie';
 
-import coursesDe from './courses.de';
+import messages from './intl';
 
 import Contact from './contact';
 import Courses from './courses';
@@ -17,36 +17,6 @@ import GilesProject from './projects/giles';
 import MipsVimHighlightingProject from './projects/mips_vim';
 import PersonalWebsiteProject from './projects/personal_website';
 import Resume from './resume';
-
-const messages: {[language: string]: any} = {
-  de: {
-    'menu.contact': 'Kontakt',
-    'menu.courses': 'Klassen',
-    'menu.home': 'Startseite',
-    'menu.projects': 'Projekte',
-    'menu.resume': 'Lebenslauf',
-
-    'resume.linkedin': 'Sie können mich auch {profileLink} finden',
-    'resume.linkedin-profile': 'auf LinkedIn',
-    'resume.my-resume-is-available': 'Mein Lebenslauf ist an diesen Links verfügbar:',
-    'resume.my-resume.de-en': 'Im deutschen Stil, auf Englisch',
-    'resume.my-resume.en': 'Im amerikanischen Stil, auf Englisch',
-
-    'fall': 'Herbst',
-    'spring': 'Frühling',
-    'summer-1': 'Sommer 1',
-    'summer-2-and-fall': 'Sommer 2 und Herbst',
-
-    ...coursesDe,
-
-    'projects.mips-vim': 'MIPS Syntax-Highlighting für Vim',
-    'projects.my-github-page': 'meiner Seite von GitHub',
-    'projects.overview': 'Ich habe an mehreren persönlichen Projekten gearbeitet.  Sie können einige auf {myGithubPage} finden.  Einige meiner Favoriten sind hier:',
-    'projects.personal-website': 'Persönliche Website',
-
-    'contact.how-to-reach': 'Sie können mir unter {email} schreiben',
-  },
-};
 
 export default function App() {
   const [currentLanguage, setCurrentLanguage] = React.useState(cookies.get('currentLanguage') || 'en');
@@ -86,7 +56,7 @@ export default function App() {
                 <PersonalWebsiteProject currentLanguage={currentLanguage}/>
               </Route>
               <Route path="/projects">
-                <Projects currentLanguage={currentLanguage}/>
+                <Projects/>
               </Route>
               <Route path="/contact">
                 <Contact/>
