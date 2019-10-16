@@ -1,4 +1,6 @@
-import React from 'react';
+/* tslint:disable:max-line-length */
+
+import * as React from 'react';
 
 export default function HomeEnglish() {
   return (
@@ -34,7 +36,7 @@ export default function HomeEnglish() {
       <p>
         After graduating from university, I returned to Amazon.com for several years, where I eventually became team lead of the internal Software Deployment team.  From there, I moved on to Porch, a company that developed software to match homeowners with home improvement professionals. There, I got to focus on frontend development and got to really learn some modern frameworks and focus on making great user experiences.
       </p>
-      
+
       <p>
         In 2017, I decided to make the move across the Atlantic Ocean to Munich, where I began to work for Definiens AG, a company developing software and techniques for performing image analysis of cancer biopsy slides. There, I got to focus on understanding use cases and doing a lot more of higher-level requirement engineering. I also was involved in modernizing much of the internal software infrastructure, and spent several months working as a manager instead of a software developer, which was an interesting experience.
       </p>
