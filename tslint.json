@@ -3,7 +3,7 @@
   "extends": [
     "tslint:recommended"
   ],
-  "jsRules": {},
+  "jsRules": true,
   "rules": {
     "arrow-parens": [ true, "ban-single-arg-parens" ],
     "interface-name": [ true, "never-prefix" ],

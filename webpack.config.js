@@ -1,3 +1,5 @@
+/* tslint:disable:object-literal-sort-keys */
+
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -13,7 +15,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: [ '.ts', '.tsx' ]
+    extensions: [ '.ts', '.tsx' ],
   },
 
   module: {
@@ -43,12 +45,12 @@ module.exports = {
         test: /\.(gif|pdf)$/i,
         loader: 'file-loader',
       },
-    ]
+    ],
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'public/index.html'
+      template: 'public/index.html',
     }),
-  ]
-}
+  ],
+};
