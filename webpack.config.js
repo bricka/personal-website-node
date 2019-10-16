@@ -13,13 +13,13 @@ module.exports = {
   },
 
   resolve: {
-    extensions: [ '.ts' ]
+    extensions: [ '.ts', '.tsx' ]
   },
 
   module: {
     rules: [
       {
-        test: /.ts$/,
+        test: /.tsx?$/,
         exclude: /node_modules/,
         loader: 'ts-loader',
       },
