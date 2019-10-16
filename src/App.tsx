@@ -4,7 +4,7 @@ import './styles/app.scss';
 import { IntlProvider } from 'react-intl';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Cookies from 'cookies-js';
+import * as cookies from 'js-cookie';
 
 import coursesDe from './courses.de';
 
@@ -49,10 +49,10 @@ const messages: {[language: string]: any} = {
 };
 
 export default function App() {
-  const [currentLanguage, setCurrentLanguage] = React.useState(Cookies.get('currentLanguage') || 'en');
+  const [currentLanguage, setCurrentLanguage] = React.useState(cookies.get('currentLanguage') || 'en');
 
   const onLanguageChange = (language: string) => {
-      Cookies.set('currentLanguage', language);
+      cookies.set('currentLanguage', language);
       setCurrentLanguage(language);
   };
 
