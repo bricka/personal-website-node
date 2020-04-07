@@ -1,3 +1,5 @@
+/* tslint:disable:object-literal-sort-keys */
+
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -5,28 +7,28 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'production',
 
+  devtool: 'source-map',
+
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/',
   },
 
+  resolve: {
+    extensions: [ '.ts', '.tsx', '.js' ],
+  },
+
   module: {
     rules: [
       {
-        test: /.m?js$/,
+        test: /.tsx?$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              '@babel/preset-env',
-              '@babel/preset-react',
-            ],
-            plugins: [
-              '@babel/plugin-proposal-class-properties',
-            ],
-          }
-        }
+        loader: 'ts-loader',
+      },
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: 'source-map-loader',
       },
       {
         test: /\.s[ac]ss$/i,
@@ -43,12 +45,12 @@ module.exports = {
         test: /\.(gif|pdf)$/i,
         loader: 'file-loader',
       },
-    ]
+    ],
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'public/index.html'
+      template: 'public/index.html',
     }),
-  ]
-}
+  ],
+};

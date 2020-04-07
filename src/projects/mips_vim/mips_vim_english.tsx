@@ -1,4 +1,6 @@
-import React from 'react';
+/* tslint:disable:max-line-length */
+
+import * as React from 'react';
 
 export default function MipsVimHighlightingProjectEnglish() {
   return (

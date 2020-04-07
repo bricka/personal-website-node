@@ -1,4 +1,6 @@
-import React from 'react';
+/* tslint:disable:max-line-length */
+
+import * as React from 'react';
 
 export default function HomeDeutsch() {
   return (
@@ -34,7 +36,7 @@ export default function HomeDeutsch() {
       <p>
         Nach meinem Abschluss kam ich zu Amazon.com wieder und wieder mit dem Software Deployment Team arbeitete. Nach ein paar Jahren wurde ich das Team Lead. Nach Amazon kam ich zu Porch, eine Firma, die Software entwickelt, um Hausbezitzer mit Hausarbeit-Profis zu verbinden. Bei Porch arbeitete ich viel auf dem Frontend und lernte modernere Frameworks und viel über gute User Experience.
       </p>
-      
+
       <p>
         In 2017 entschied ich nach München umzuziehen, wo ich bei Definiens AG anfing zu arbeiten, eine Firma, die Software entwickelt um Image Analysis für Krebsbilder zu schaffen. Bei Definiens arbeitete ich viel mit User-Anforderungen und modinisierte viel von der Software-Entwicklung-Infrastruktur. Ich arbeitete auch für sieben Monate als Manager, und das war eine interessante Erfahrung.
       </p>

@@ -7,26 +7,31 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
+    "@types/js-cookie": "^2.2.3",
+    "@types/react": "^16.9.5",
+    "@types/react-dom": "^16.9.1",
+    "@types/react-router-dom": "^5.1.0",
+    "@types/recompose": "^0.30.7",
     "ajv": "^6.10.2",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
-    "eslint": "^6.5.1",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.16.0",
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.12.0",
     "sass": "^1.23.0",
     "sass-loader": "^8.0.0",
+    "source-map-loader": "^0.2.4",
     "style-loader": "^1.0.0",
+    "ts-loader": "^6.2.0",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4",
     "webpack": "^4.41.1",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
   },
   "dependencies": {
-    "cookies-js": "^1.2.3",
-    "prop-types": "^15.7.2",
+    "js-cookie": "^2.2.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-intl": "^3.3.2",
@@ -37,7 +42,7 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack-dev.config.js",
     "build": "webpack",
-    "lint": "eslint src/"
+    "lint": "tslint -p tsconfig.json"
   },
   "engines": {
     "node": "12.x"

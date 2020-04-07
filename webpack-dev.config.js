@@ -3,8 +3,8 @@ const prodConfig = require('./webpack.config');
 module.exports = {
   ...prodConfig,
   mode: 'development',
-  devtool: 'inline-source-map',
   devServer: {
+    historyApiFallback: true,
     hot: true,
     open: true,
   }
