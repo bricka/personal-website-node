@@ -18,7 +18,7 @@ import MipsVimHighlightingProject from './projects/mips_vim';
 import PersonalWebsiteProject from './projects/personal_website';
 import Resume from './resume';
 
-export default function App() {
+export const App: React.FunctionComponent = () => {
   const [currentLanguage, setCurrentLanguage] = React.useState(cookies.get('currentLanguage') || 'en');
 
   const onLanguageChange = (language: string) => {
