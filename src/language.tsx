@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import styled from 'styled-components';
+
 interface Language {
   locale: string;
   name: string;
@@ -21,20 +23,29 @@ interface Props {
   onLanguageChange: (language: string) => void;
 }
 
+const LanguageSelectorWrapper = styled.div`
+  padding: 5px;
+  text-align: center;
+`;
+
+const CurrentLanguage = styled.span`
+  font-weight: bold
+`;
+
 export default class LanguageSelector extends React.Component<Props> {
   public render = () => (
-    <div className="language-selector">
+    <LanguageSelectorWrapper>
       Language:&nbsp;
       <span className="language-options">
         {this.languageOption(languages[0])}&nbsp;/&nbsp;{this.languageOption(languages[1])}
       </span>
-    </div>
+    </LanguageSelectorWrapper>
   )
 
   private languageOption = ({ name, locale }: Language): JSX.Element => {
     if (this.props.currentLanguage === locale) {
       return (
-        <span className="current-language" key={locale}>{name}</span>
+        <CurrentLanguage>{name}</CurrentLanguage>
       );
     } else {
       return (
