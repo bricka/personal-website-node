@@ -146,16 +146,3 @@ p.comment {
   margin-left: 5pt;
   font-style: italic;
 }
-
-div.contact {
-  div.field {
-    margin-bottom: 10px;
-
-    display: flex;
-    flex-direction: column;
-  }
-
-  input[type=submit] {
-    width: 100%;
-  }
-}
