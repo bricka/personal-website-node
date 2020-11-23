@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
 
 export enum CourseLevel {
   MASTER = 'master',
@@ -25,10 +26,14 @@ function signForCourse(level?: CourseLevel) {
   }
 }
 
+const CourseName = styled.span`
+  font-weight: bold;
+`;
+
 export function Course(props: Props) {
   return (
     <li>
-      <span className="class-name">
+      <CourseName>
         {props.nameId ? (
           <FormattedMessage
             id={props.nameId}
@@ -38,9 +43,9 @@ export function Course(props: Props) {
           props.defaultName
         )}
         {signForCourse(props.level)}
-      </span>
-      &nbsp;
-      {props.teacher && `(${props.teacher})`}
+      </CourseName>
+    &nbsp;
+    {props.teacher && `(${props.teacher})`}
     </li>
   );
 }
