@@ -19,6 +19,7 @@
     "source-map-loader": "^1.1.2",
     "style-loader": "^2.0.0",
     "ts-loader": "^8.0.11",
+    "ts-node": "^9.0.0",
     "tslint": "^6.1.1",
     "typescript": "^4.1.2",
     "webpack": "^5.6.0",
@@ -33,13 +34,16 @@
     "react-dom": "^17.0.1",
     "react-intl": "^5.10.4",
     "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.2.1"
   },
   "scripts": {
     "start": "webpack serve --config webpack-dev.config.js",
     "build": "webpack",
     "lint": "tslint -p tsconfig.json",
-    "dev": "./server-build/index.js"
+    "dev": "npm run build:dev && npm run start:dev",
+    "build:dev": "webpack --config webpack-dev.config.js",
+    "start:dev": "ts-node ./server/index.tsx"
   },
   "engines": {
     "node": "12.x"
