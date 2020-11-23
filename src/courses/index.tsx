@@ -1,21 +1,26 @@
 import * as React from 'react';
 
 import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
 
 import { Course, CourseLevel } from './course';
 import { Season, Semester } from './semester';
+
+const IconLegendList = styled.ul`
+  list-style-type: none;
+`;
 
 export default function Courses() {
   return (
     <div>
       <p>
         <FormattedMessage
-        id="courses.introduction"
-        defaultMessage="These are the courses that I took in university."
+          id="courses.introduction"
+          defaultMessage="These are the courses that I took in university."
         />
       </p>
 
-      <ul className="unmarked">
+      <IconLegendList>
         <li>* &ndash;
           <FormattedMessage
             id="courses.masters-level"
@@ -28,16 +33,16 @@ export default function Courses() {
             defaultMessage="denotes a PhD-level course"
           />
         </li>
-      </ul>
+      </IconLegendList>
 
       <Semester
         seasonId={Season.SPRING}
         year={2011}
       >
         <Course
-          defaultName="Fundamentals of Artificial Intelligence"
-          level={CourseLevel.MASTER}
-          nameId="courses.fundamentals-of-ai"
+            defaultName="Fundamentals of Artificial Intelligence"
+            level={CourseLevel.MASTER}
+nameId="courses.fundamentals-of-ai"
           teacher="Carole Hafner"
         />
         <Course

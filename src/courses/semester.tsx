@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
 
 export enum Season {
   FALL = 'fall',
@@ -36,6 +37,11 @@ const seasonIntlData = {
   },
 };
 
+const Comment = styled.p`
+  margin-left: 5pt;
+  font-style: italic;
+`;
+
 export function Semester(props: Props) {
   return (
     <div>
@@ -43,17 +49,17 @@ export function Semester(props: Props) {
         <FormattedMessage
           {...seasonIntlData[props.seasonId]}
         />
-        &nbsp;
-        {props.year}
+    &nbsp;
+    {props.year}
       </h2>
 
       {props.commentId && (
-         <p className="comment">
-           <FormattedMessage
-             id={props.commentId}
-             defaultMessage={props.defaultComment}
-            />
-         </p>
+        <Comment>
+          <FormattedMessage
+            id={props.commentId}
+            defaultMessage={props.defaultComment}
+          />
+        </Comment>
       )}
 
       <ul>
