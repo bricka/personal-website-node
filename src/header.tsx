@@ -14,12 +14,24 @@ const HeaderWrapper = styled.div`
   background : #D9D9D9;
 `;
 
+const TitleWrapper = styled.div`
+  background : #999;
+  color: #FCC915;
+  text-align : center;
+
+  h1 {
+    font-size : 40px;
+    margin-top : 0;
+    margin-bottom : 0;
+  }
+`;
+
 export default function Header(props: Props) {
   return (
     <HeaderWrapper>
-      <div className="title">
+      <TitleWrapper>
         <h1>Alex Brick</h1>
-      </div>
+      </TitleWrapper>
 
       <Menu/>
 
