@@ -1,8 +1,9 @@
 import * as React from 'react';
 
+import { RouteComponentProps } from '@reach/router';
 import { FormattedMessage } from 'react-intl';
 
-export default function Contact() {
+export default function Contact(_props: RouteComponentProps) {
   return (
     <div>
       <p>

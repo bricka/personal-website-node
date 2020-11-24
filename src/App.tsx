@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { IntlProvider } from 'react-intl';
-import { Route, Switch } from 'react-router-dom';
+import { Router, RouteComponentProps } from '@reach/router';
 
 import * as cookies from 'js-cookie';
 
@@ -16,6 +16,14 @@ import GilesProject from './projects/giles';
 import MipsVimHighlightingProject from './projects/mips_vim';
 import PersonalWebsiteProject from './projects/personal_website';
 import Resume from './resume';
+
+function SubRouter({ children }: React.PropsWithChildren<RouteComponentProps>) {
+  return (
+    <>
+      {children}
+    </>
+  )
+}
 
 export const App: React.FunctionComponent = () => {
   const [currentLanguage, setCurrentLanguage] = React.useState(cookies.get('currentLanguage') || 'en');
@@ -37,32 +45,18 @@ export const App: React.FunctionComponent = () => {
         />
 
         <div className="body">
-          <Switch>
-            <Route path="/resume">
-              <Resume currentLanguage={currentLanguage}/>
-            </Route>
-            <Route path="/courses">
-              <Courses/>
-            </Route>
-            <Route path="/projects/mips-vim">
-              <MipsVimHighlightingProject currentLanguage={currentLanguage}/>
-            </Route>
-            <Route path="/projects/giles">
-              <GilesProject currentLanguage={currentLanguage}/>
-            </Route>
-            <Route path="/projects/personal-website">
-              <PersonalWebsiteProject currentLanguage={currentLanguage}/>
-            </Route>
-            <Route path="/projects">
-              <Projects/>
-            </Route>
-            <Route path="/contact">
-              <Contact/>
-            </Route>
-            <Route path="/">
-              <Home currentLanguage={currentLanguage}/>
-            </Route>
-          </Switch>
+          <Router>
+            <Home path="/" currentLanguage={currentLanguage}/>
+            <Resume path="resume" currentLanguage={currentLanguage}/>
+            <Courses path="courses" />
+            <SubRouter path="projects">
+              <Projects path="/" />
+              <MipsVimHighlightingProject path="mips-vim" currentLanguage={currentLanguage}/>
+              <GilesProject path="giles" currentLanguage={currentLanguage}/>
+              <PersonalWebsiteProject path="personal-website" currentLanguage={currentLanguage}/>
+            </SubRouter>
+            <Contact path="contact" />
+          </Router>
         </div>
       </div>
     </IntlProvider>

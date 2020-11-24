@@ -1,9 +1,10 @@
 import * as React from 'react';
 
+import { RouteComponentProps } from '@reach/router';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 
-const Projects = () => (
+const Projects = (_props: RouteComponentProps) => (
   <div>
     <p>
       <FormattedMessage

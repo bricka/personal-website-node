@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { RouteComponentProps } from '@reach/router';
 import { FormattedMessage } from 'react-intl';
 
 const germanResumePath = require('./resume-de-en.pdf');
@@ -27,7 +28,7 @@ const germanEnLink = (
   </p>
 );
 
-interface Props {
+interface Props extends RouteComponentProps {
   currentLanguage: string;
 }
 

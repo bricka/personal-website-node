@@ -1,11 +1,12 @@
 import * as React from 'react';
 
+import { RouteComponentProps } from '@reach/router';
 import { FormattedMessage } from 'react-intl';
 
 import { Course, CourseLevel } from './course';
 import { Season, Semester } from './semester';
 
-export default function Courses() {
+export default function Courses(_props: RouteComponentProps) {
   return (
     <div>
       <p>

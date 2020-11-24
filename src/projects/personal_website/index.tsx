@@ -1,9 +1,11 @@
 import * as React from 'react';
 
+import { RouteComponentProps } from '@reach/router';
+
 import PersonalWebsiteProjectDeutsch from './personal_website_deutsch';
 import PersonalWebsiteProjectEnglish from './personal_website_english';
 
-interface Props {
+interface Props extends RouteComponentProps {
   currentLanguage: string;
 }
 
