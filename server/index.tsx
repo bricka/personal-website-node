@@ -1,3 +1,4 @@
+import { ServerLocation } from '@reach/router';
 import * as express from 'express';
 import { readFile } from 'fs';
 import * as mustache from 'mustache';
@@ -14,8 +15,12 @@ async function startApp() {
 
   const app = express();
 
-  app.get('/', (_req, res) => {
-    const html = renderToString(<App/>);
+  app.get('/', (req, res) => {
+    const html = renderToString(
+      <ServerLocation url={req.url}>
+        <App/>
+      </ServerLocation>
+    );
     res.send(
       mustache.render(mustacheFile, {
         html,
