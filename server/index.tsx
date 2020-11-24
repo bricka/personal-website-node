@@ -11,7 +11,7 @@ import { App } from '../src/App'
 
 async function startApp() {
   const mustacheFile =
-    await promisify(readFile)(resolve('./index.mustache'), 'utf8');
+    await promisify(readFile)(resolve(__dirname, 'index.mustache'), 'utf8');
 
   const app = express();
 
