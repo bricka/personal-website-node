@@ -15,7 +15,9 @@ async function startApp() {
 
   const app = express();
 
-  app.get('/', (req, res) => {
+  app.use('/public', express.static('build'));
+
+  app.get(/.*/, (req, res) => {
     const html = renderToString(
       <ServerLocation url={req.url}>
         <App/>
@@ -24,11 +26,17 @@ async function startApp() {
     res.send(
       mustache.render(mustacheFile, {
         html,
+        language: 'en-US',
       })
     )
   });
 
-  app.listen(process.env.PORT || 3000);
+
+  const portNumber = process.env.PORT || 3000;
+
+  app.listen(portNumber, () => {
+    console.log(`Listening on port ${portNumber}`);
+  });
 }
 
 startApp()
