@@ -1,8 +1,7 @@
 import * as React from 'react';
 
-import { RouteComponentProps } from '@reach/router';
+import { Link, RouteComponentProps } from '@reach/router';
 import { FormattedMessage } from 'react-intl';
-import { Link } from 'react-router-dom';
 
 const Projects = (_props: RouteComponentProps) => (
   <div>
@@ -25,7 +24,7 @@ const Projects = (_props: RouteComponentProps) => (
 
     <ul>
       <li>
-        <Link to="/projects/mips-vim">
+        <Link to="mips-vim">
           <FormattedMessage
             id="projects.mips-vim"
             defaultMessage="MIPS Syntax Highlighting for Vim"
@@ -33,12 +32,12 @@ const Projects = (_props: RouteComponentProps) => (
         </Link>
       </li>
       <li>
-        <Link to="/projects/giles">
+        <Link to="giles">
           giles CD Ripper
         </Link>
       </li>
       <li>
-        <Link to="/projects/personal-website">
+        <Link to="personal-website">
           <FormattedMessage
             id="projects.personal-website"
             defaultMessage="Personal Website"
