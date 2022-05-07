@@ -43,7 +43,11 @@ module.exports = {
       },
       {
         test: /\.pdf$/i,
-        loader: 'file-loader',
+        use: [
+          {
+            loader: 'file-loader',
+          }
+        ]
       },
     ],
   },

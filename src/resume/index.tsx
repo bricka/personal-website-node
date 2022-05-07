@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import { FormattedMessage } from 'react-intl';
 
-const germanResumePath = require('./resume-de-en.pdf');
-const americanResumePath = require('./resume.pdf');
+import germanResumePath from './resume-de-en.pdf';
+import americanResumePath from './resume.pdf';
 
 const americanLink = (
   <p key="resume-us">
