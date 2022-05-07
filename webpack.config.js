@@ -42,7 +42,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(gif|pdf)$/i,
+        test: /\.pdf$/i,
         loader: 'file-loader',
       },
     ],
