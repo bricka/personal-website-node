@@ -1,6 +1,6 @@
 import coursesDe from './courses-de';
 
-const messages: {[language: string]: any} = {
+const messages: {[language: string]: {[key: string]: string }} = {
   de: {
     'menu.contact': 'Kontakt',
     'menu.courses': 'Klassen',
