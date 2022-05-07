@@ -35,7 +35,7 @@
   "scripts": {
     "build": "webpack",
     "lint": "tslint -p tsconfig.json",
-    "start": "static build --spa",
+    "start": "static build -a 0.0.0.0 --spa",
     "start:dev": "webpack serve --config webpack-dev.config.js"
   },
   "engines": {
