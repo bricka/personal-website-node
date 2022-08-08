@@ -40,7 +40,7 @@ export default function App() {
         <div className="body">
           <Switch>
             <Route path="/resume">
-              <Resume currentLanguage={currentLanguage}/>
+              <Resume/>
             </Route>
             <Route path="/courses">
               <Courses/>

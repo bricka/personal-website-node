@@ -10,9 +10,8 @@ const messages: {[language: string]: {[key: string]: string }} = {
 
     'resume.linkedin': 'Sie können mich auch {profileLink} finden',
     'resume.linkedin-profile': 'auf LinkedIn',
-    'resume.my-resume-is-available': 'Mein Lebenslauf ist an diesen Links verfügbar:',
-    'resume.my-resume.de-en': 'Im deutschen Stil, auf Englisch',
-    'resume.my-resume.en': 'Im amerikanischen Stil, auf Englisch',
+    'resume.my-resume-is-available': 'Bitte finden Sie hier mein Lebenslauf:',
+    'resume.my-resume': 'Mein Lebenslauf',
 
     'fall': 'Herbst',
     'spring': 'Frühling',
