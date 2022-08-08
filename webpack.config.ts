@@ -1,10 +1,8 @@
-/* tslint:disable:object-literal-sort-keys */
+import * as path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import * as webpack from 'webpack';
 
-const path = require('path');
-
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-module.exports = {
+const config: webpack.Configuration = {
   mode: 'production',
 
   devtool: 'source-map',
@@ -42,12 +40,11 @@ module.exports = {
         ],
       },
       {
-        test: /\.pdf$/i,
-        use: [
-          {
-            loader: 'file-loader',
-          }
-        ]
+        test: /\.pdf/i,
+        type: 'asset/resource',
+        generator: {
+          filename: '[name][ext]',
+        }
       },
     ],
   },
@@ -58,3 +55,5 @@ module.exports = {
     }),
   ],
 };
+
+export default config;

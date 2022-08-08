@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { FormattedMessage } from 'react-intl';
 
-import resumePath from './resume.pdf';
+import resumePath from './alex-figl-brick-resume.pdf';
 
 export default function Resume() {
   return (
