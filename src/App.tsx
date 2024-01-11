@@ -17,6 +17,7 @@ import GilesProject from './projects/giles';
 import MipsVimHighlightingProject from './projects/mips_vim';
 import PersonalWebsiteProject from './projects/personal_website';
 import Resume from './resume';
+import { Container } from 'react-bootstrap';
 
 export default function App() {
   const [currentLanguage, setCurrentLanguage] = React.useState(cookies.get('currentLanguage') || 'en');
@@ -32,39 +33,41 @@ export default function App() {
       messages={messages[currentLanguage]}
     >
       <div className="app">
-        <Header
-          currentLanguage={currentLanguage}
-          onLanguageChange={onLanguageChange}
-        />
+        <Container>
+          <Header
+            currentLanguage={currentLanguage}
+            onLanguageChange={onLanguageChange}
+          />
 
-        <div className="body">
-          <Switch>
-            <Route path="/resume">
-              <Resume/>
-            </Route>
-            <Route path="/courses">
-              <Courses/>
-            </Route>
-            <Route path="/projects/mips-vim">
-              <MipsVimHighlightingProject currentLanguage={currentLanguage}/>
-            </Route>
-            <Route path="/projects/giles">
-              <GilesProject currentLanguage={currentLanguage}/>
-            </Route>
-            <Route path="/projects/personal-website">
-              <PersonalWebsiteProject currentLanguage={currentLanguage}/>
-            </Route>
-            <Route path="/projects">
-              <Projects/>
-            </Route>
-            <Route path="/contact">
-              <Contact/>
-            </Route>
-            <Route path="/">
-              <Home currentLanguage={currentLanguage}/>
-            </Route>
-          </Switch>
-        </div>
+          <div className="body">
+            <Switch>
+              <Route path="/resume">
+                <Resume />
+              </Route>
+              <Route path="/courses">
+                <Courses />
+              </Route>
+              <Route path="/projects/mips-vim">
+                <MipsVimHighlightingProject currentLanguage={currentLanguage} />
+              </Route>
+              <Route path="/projects/giles">
+                <GilesProject currentLanguage={currentLanguage} />
+              </Route>
+              <Route path="/projects/personal-website">
+                <PersonalWebsiteProject currentLanguage={currentLanguage} />
+              </Route>
+              <Route path="/projects">
+                <Projects />
+              </Route>
+              <Route path="/contact">
+                <Contact />
+              </Route>
+              <Route path="/">
+                <Home currentLanguage={currentLanguage} />
+              </Route>
+            </Switch>
+          </div>
+        </Container>
       </div>
     </IntlProvider>
   );

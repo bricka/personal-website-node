@@ -1,26 +1,20 @@
 import * as React from 'react';
+import { Navbar } from 'react-bootstrap';
 
-import Language from './language';
-import Menu from './menu';
+// import Language from './language';
+// import Menu from './menu';
 
 interface Props {
   currentLanguage: string;
   onLanguageChange: (language: string) => void;
 }
 
-export default function Header(props: Props) {
+export default function Header(_props: Props) {
   return (
-    <div className="header">
-      <div className="title">
-        <h1>Alex Brick</h1>
-      </div>
-
-      <Menu/>
-
-      <Language
-        currentLanguage={props.currentLanguage}
-        onLanguageChange={props.onLanguageChange}
-      />
-    </div>
+    <>
+      <Navbar>
+        <Navbar.Brand>Alex</Navbar.Brand>
+      </Navbar>
+    </>
   );
 }
