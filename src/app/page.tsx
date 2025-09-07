@@ -1,103 +1,25 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <p>My name is Alex Brick, and I am a professional software developer (and sometimes manager) in Munich, Germany. I enjoy creating tools and software that solve user needs in a satisfying way.</p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      <p>My interest in computers began many, many years ago, at the ripe age of 10. I can still remember my first number guessing game that drew me into this complex world of interactive and powerful software. Of course, it also had no loops, no flow control, or anything. Just if statements and function calls. Maybe it wasn't such a great program after all...</p>
+
+      <p>Well, either way, times have changed. After taking AP Programming in my high school and being introduced to object-oriented design, I discovered what a wide, wide world computer science really is. I interned at NIH, where I wrote actually-used software, and so became even further exposed to the world of programming. In 2005, I released my first application, <code>lineaksetup</code>, a configuration utility for the LinEAK project.</p>
+
+      <p>I went to university at Northeastern University in Boston, where I majored in Computer Science. I did research with the High Performance Computing group there, doing work on low-level user-level process checkpointing.</p>
+
+      <p>During the second half of 2008, I participated in a six-month co-op with Amazon.com, where I was a part of the Client Experience Analytics team. This was a remarkable experience, where I was given a high level of autonomy and was tasked with designing and building services and pieces of infrastructure on my own. I emerged from this a far better developer, I believe.</p>
+
+      <p>For the fall of 2009, I went to J.F. Oberlin University in Tokyo, Japan to study abroad. At the university, I studied the Japanese language and Japanese culture, with the possible goal of returning to Japan to work or live for some period of time in the future. I find Japan very interesting, and I would love to combine my skills and interest in Computer Science with my interest of Japan.</p>
+
+      <p>For the second half of 2010, I returned to Amazon.com, where I worked on another internal team, the Software Deployment team. Here, I was tasked with designing, developing, and defending an entirely new system and infrastructure. I learned a lot about good design, and again had to work with a great deal of autonomy.</p>
+
+      <p>After graduating from university, I returned to Amazon.com for several years, where I eventually became team lead of the internal Software Deployment team. From there, I moved on to Porch, a company that developed software to match homeowners with home improvement professionals. There, I got to focus on frontend development and got to really learn some modern frameworks and focus on making great user experiences.</p>
+
+      <p>In 2017, I decided to make the move across the Atlantic Ocean to Munich, where I began to work for Definiens AG, a company developing software and techniques for performing image analysis of cancer biopsy slides. There, I got to focus on understanding use cases and doing a lot more of higher - level requirement engineering. I also was involved in modernizing much of the internal software infrastructure, and spent several months working as a manager instead of a software developer, which was an interesting experience.</p>
+
+      <p>I continue to love learning new technologies and approaches, and look forward to lots of new problems!</p>
+    </>
   );
 }
