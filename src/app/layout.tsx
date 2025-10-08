@@ -15,11 +15,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header>
-          <h1 className="text-xl"> Alex Figl-Brick</h1>
-          <nav><Navigation/></nav>
-        </header>
-        {children}
+        <div className="m-4 md:m-auto md:w-5/6">
+          <header className="text-center">
+            <span className="text-xl"> Alex Figl-Brick</span>
+            <nav><Navigation/></nav>
+          </header>
+          <div>
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );

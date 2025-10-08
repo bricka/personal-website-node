@@ -3,8 +3,8 @@ function SkillCard({ title, children }: {
   children: React.ReactNode;
 }) {
   return (
-    <div>
-      <header className="text-lg">{title}</header>
+    <div className="border rounded-md p-4">
+      <header className="text-lg text-center">{title}</header>
       {children}
     </div>
   )
@@ -21,19 +21,20 @@ function SkillList({ children }: { children: React.ReactNode; }) {
 export default function Home() {
   return (
     <>
-      <p>My name is Alex Figl-Brick, and I am a professional software developer in Munich, Germany. I enjoy creating tools and software that solve user needs in a satisfying way. I have been developing software for over 20 years, and have worked in companies big and small, as a developer, team lead, and manager.</p>
+      <p>My name is Alex Figl-Brick, and I am a professional full-stack software developer in Munich, Germany. I enjoy creating tools and software that solve user needs in a satisfying way. I have been developing software for over 20 years, and have worked in companies big and small, as a developer, team lead, and manager.</p>
 
       <p> In my ideal working mode, I work closely with people who understand the users to understand a problem in the business or in the existing software, and we work together to determine a solution that solves the problem with the right amount of development effort.</p>
 
       <p>I speak fluent English and German, and basic Japanese and Spanish, and have experience working with colleagues across many cultures and countries.</p>
 
-      <div>
+      <header className="mt-4 text-xl">My Skills</header>
+
+      <div className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
         <SkillCard title="Backend Skills">
           <header>JVM-based</header>
           <SkillList>
-            <li>Java</li>
-            <li>Kotlin</li>
-            <li>Spring Boot</li>
+            <li>Java and Kotlin as languages</li>
+            <li>Spring and Spring Boot</li>
           </SkillList>
 
           <header>TypeScript-based</header>
@@ -41,6 +42,7 @@ export default function Home() {
             <li>Next.js</li>
             <li>Nest.js</li>
             <li>Express</li>
+            <li>Node and Deno</li>
           </SkillList>
         </SkillCard>
 
