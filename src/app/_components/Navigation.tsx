@@ -21,6 +21,7 @@ export function Navigation() {
     <div className="flex gap-2 justify-center">
       <NavButton title="Home" href="/" />
       <NavButton title="Resume" href="/resume" />
+      <NavButton title="Projects" href="/projects" />
     </div>
   )
 }
