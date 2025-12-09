@@ -31,7 +31,7 @@ export default class LanguageSelector extends React.Component<Props> {
     </div>
   )
 
-  private languageOption = ({ name, locale }: Language): JSX.Element => {
+  private languageOption = ({ name, locale }: Language): React.JSX.Element => {
     if (this.props.currentLanguage === locale) {
       return (
         <span className="current-language" key={locale}>{name}</span>
