@@ -1,4 +1,8 @@
-export function Card({ title, centerTitle = false, children }: {
+export function Card({
+  title,
+  centerTitle = false,
+  children,
+}: {
   title: string | React.ReactNode;
   centerTitle?: boolean;
   children: React.ReactNode;
@@ -13,5 +17,5 @@ export function Card({ title, centerTitle = false, children }: {
       <header className={headerClassName}>{title}</header>
       {children}
     </div>
-  )
+  );
 }

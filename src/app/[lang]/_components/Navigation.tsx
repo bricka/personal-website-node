@@ -4,10 +4,7 @@ import { SupportedLanguage } from '@/app/supportedLanguage';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-function NavButton({ title, href }: {
-  title: string;
-  href: string;
-}) {
+function NavButton({ title, href }: { title: string; href: string }) {
   const pathname = usePathname();
 
   if (pathname === href) {
@@ -28,9 +25,9 @@ const navTitles = {
     resume: 'Lebenslauf',
     projects: 'Projekte',
   },
-}
+};
 
-export function Navigation({ lang }: { lang: SupportedLanguage; }) {
+export function Navigation({ lang }: { lang: SupportedLanguage }) {
   const hrefWithLang = (href: string) => `/${lang}${href}`;
 
   return (
@@ -39,5 +36,5 @@ export function Navigation({ lang }: { lang: SupportedLanguage; }) {
       <NavButton title={navTitles[lang].resume} href={hrefWithLang('/resume')} />
       <NavButton title={navTitles[lang].projects} href={hrefWithLang('/projects')} />
     </div>
-  )
+  );
 }

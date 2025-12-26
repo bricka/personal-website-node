@@ -1,10 +1,10 @@
-import { NextRequest, NextResponse } from "next/server";
-import Negotiator from "negotiator";
+import { NextRequest, NextResponse } from 'next/server';
+import Negotiator from 'negotiator';
 
 const supportedLanguages = ['en', 'de'];
 
 function isInternalPath(path: string): boolean {
-  return path == "favicon.ico" || path.startsWith("/_next");
+  return path == 'favicon.ico' || path.startsWith('/_next');
 }
 
 export function proxy(request: NextRequest) {
@@ -13,13 +13,15 @@ export function proxy(request: NextRequest) {
     return;
   }
 
-  const pathContainsLocale = supportedLanguages.some(l => requestedPath.startsWith(`/${l}`));
+  const pathContainsLocale = supportedLanguages.some((l) => requestedPath.startsWith(`/${l}`));
   if (pathContainsLocale) {
     return;
   }
 
   const negotiator = new Negotiator({
-    headers: { 'accept-language': request.headers.get('accept-language') ?? undefined },
+    headers: {
+      'accept-language': request.headers.get('accept-language') ?? undefined,
+    },
   });
 
   const bestLanguage = negotiator.language(supportedLanguages);

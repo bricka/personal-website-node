@@ -18,12 +18,12 @@ export default async function RootLayout(props: LayoutProps<'/[lang]'>) {
         <div className="m-4 md:m-auto md:w-5/6">
           <header className="text-center">
             <span className="text-xl"> Alex Figl-Brick</span>
-            <nav><Navigation lang={lang}/></nav>
+            <nav>
+              <Navigation lang={lang} />
+            </nav>
             <LanguagePicker currentLanguage={lang} />
           </header>
-          <div>
-            {props.children}
-          </div>
+          <div>{props.children}</div>
         </div>
       </body>
     </html>
