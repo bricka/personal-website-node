@@ -8,10 +8,11 @@ function LanguageButton({ currentLanguage, lang, text }: {
   lang: string;
   text: string;
 }) {
+  const pathname = usePathname();
+
   if (currentLanguage === lang) {
     return <span className="font-bold">{text}</span>;
   } else {
-    const pathname = usePathname();
     const newPath = pathname.replace(new RegExp(`^/${currentLanguage}`), `/${lang}`);
     return <Link href={newPath}>{text}</Link>;
   }
