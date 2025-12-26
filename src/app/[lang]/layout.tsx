@@ -14,6 +14,9 @@ export default async function RootLayout(props: LayoutProps<'/[lang]'>) {
   const lang = langStr as SupportedLanguage;
   return (
     <html lang="en">
+      <head>
+        <link rel="me" href="https://social.tchncs.de/@cabhan" />
+      </head>
       <body>
         <div className="m-4 md:m-auto md:w-5/6">
           <header className="text-center">
