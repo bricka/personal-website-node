@@ -1,6 +1,11 @@
 import { SupportedLanguage } from '@/app/supportedLanguage';
 import { Card } from '@/components/Card';
+import { staticLangs } from '@/utils/staticLangs';
 import { Metadata } from 'next';
+
+export async function generateStaticParams() {
+  return staticLangs();
+}
 
 const titleByLanguage = {
   en: 'Alex Figl-Brick: Projects',

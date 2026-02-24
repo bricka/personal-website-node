@@ -1,5 +1,10 @@
 import { Card } from '@/components/Card';
 import { SupportedLanguage } from '../supportedLanguage';
+import { staticLangs } from '@/utils/staticLangs';
+
+export async function generateStaticParams() {
+  return staticLangs();
+}
 
 function SkillList({ children }: { children: React.ReactNode }) {
   return <ul className="list-inside list-disc">{children}</ul>;

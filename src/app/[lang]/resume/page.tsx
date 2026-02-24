@@ -1,6 +1,11 @@
 import { SupportedLanguage } from '@/app/supportedLanguage';
+import { staticLangs } from '@/utils/staticLangs';
 import { Metadata } from 'next';
 import Link from 'next/link';
+
+export async function generateStaticParams() {
+  return staticLangs();
+}
 
 const titleByLanguage = {
   en: 'Alex Figl-Brick: Resume',
