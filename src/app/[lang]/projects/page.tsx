@@ -1,4 +1,5 @@
 import { SupportedLanguage } from '@/app/supportedLanguage';
+import { Link } from '@/components/Link';
 import { Card } from '@/components/Card';
 import { staticLangs } from '@/utils/staticLangs';
 import { Metadata } from 'next';
@@ -50,13 +51,13 @@ function KotlinTsModeCard({ lang }: { lang: SupportedLanguage }): React.ReactEle
           }
         >
           <p>
-            <a href="https://gitlab.com/bricka/emacs-kotlin-ts-mode">GitLab Link</a>
+            <Link href="https://gitlab.com/bricka/emacs-kotlin-ts-mode">GitLab Link</Link>
           </p>
 
           <p>
             This is by far my most successful project. It uses the awesome{' '}
-            <a href="https://tree-sitter.github.io/tree-sitter/">tree-sitter</a> integration in
-            Emacs to provide a nice editing environment for Kotlin.
+            <Link href="https://tree-sitter.github.io/tree-sitter/">tree-sitter</Link> integration
+            in Emacs to provide a nice editing environment for Kotlin.
           </p>
         </Card>
       );
@@ -70,13 +71,13 @@ function KotlinTsModeCard({ lang }: { lang: SupportedLanguage }): React.ReactEle
           }
         >
           <p>
-            <a href="https://gitlab.com/bricka/emacs-kotlin-ts-mode">GitLab Link</a>
+            <Link href="https://gitlab.com/bricka/emacs-kotlin-ts-mode">GitLab Link</Link>
           </p>
 
           <p>
             Das ist mit Abstand mein erfolgreichstes Projekt. Ich habe die tolle{' '}
-            <a href="https://tree-sitter.github.io/tree-sitter/">tree-sitter</a> Integration in
-            Emacs, um eine schönes Arbeitumfeld für Kotlin zu entwickeln.
+            <Link href="https://tree-sitter.github.io/tree-sitter/">tree-sitter</Link> Integration
+            in Emacs, um eine schönes Arbeitumfeld für Kotlin zu entwickeln.
           </p>
         </Card>
       );
@@ -90,14 +91,14 @@ function LilypondSimpleTsCard({ lang }: { lang: SupportedLanguage }): React.Reac
         <Card title="Utilities for simplified LilyPond files">
           <ul className="list-inside">
             <li>
-              <a href="https://gitlab.com/bricka/tree-sitter-lilypond-simple">
+              <Link href="https://gitlab.com/bricka/tree-sitter-lilypond-simple">
                 GitLab Link for grammar
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://gitlab.com/bricka/emacs-lilypond-simple-ts-mode">
+              <Link href="https://gitlab.com/bricka/emacs-lilypond-simple-ts-mode">
                 GitLab Link for Emacs support
-              </a>
+              </Link>
             </li>
           </ul>
 
@@ -105,11 +106,11 @@ function LilypondSimpleTsCard({ lang }: { lang: SupportedLanguage }): React.Reac
             I play banjo as a hobby (if you&apos;re interested, I am currently focusing on the Irish
             Tenor Banjo, but I also play clawhammer on the American five-string banjo), and was
             interested in having my sheet music digitally. I turned to{' '}
-            <a href="https://lilypond.org/">LilyPond</a> as a language for transcribing music, but I
-            found some editor support lacking. In particular, the language is not context-free, and
-            because it is so flexible, it&apos;s quite difficult to parse. There is an attempt to
-            write a <code>tree-sitter</code> grammar for it, but the grammar is so generic that it
-            is difficult to use as an editor plugin.
+            <Link href="https://lilypond.org/">LilyPond</Link> as a language for transcribing music,
+            but I found some editor support lacking. In particular, the language is not
+            context-free, and because it is so flexible, it&apos;s quite difficult to parse. There
+            is an attempt to write a <code>tree-sitter</code> grammar for it, but the grammar is so
+            generic that it is difficult to use as an editor plugin.
           </p>
 
           <p>
@@ -124,14 +125,14 @@ function LilypondSimpleTsCard({ lang }: { lang: SupportedLanguage }): React.Reac
         <Card title="Werkzeuge for einfachere LilyPond Dateien">
           <ul className="list-inside">
             <li>
-              <a href="https://gitlab.com/bricka/tree-sitter-lilypond-simple">
+              <Link href="https://gitlab.com/bricka/tree-sitter-lilypond-simple">
                 GitLab Link für Grammatik
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://gitlab.com/bricka/emacs-lilypond-simple-ts-mode">
+              <Link href="https://gitlab.com/bricka/emacs-lilypond-simple-ts-mode">
                 GitLab Link für Emacs Integration
-              </a>
+              </Link>
             </li>
           </ul>
 
@@ -139,11 +140,11 @@ function LilypondSimpleTsCard({ lang }: { lang: SupportedLanguage }): React.Reac
             Ich spiele Banjo als Hobby (falls du Interesse hast, ich fokusiere zur Zeit auf das
             irische Tenorbanjo, habe aber in der Vergangenheit auch Clawhammer auf dem
             amerikanischen fünfsaitigen Banjo gespielt), und wollte meine Noten digital auf dem
-            Laptop haben. Ich habe dafür <a href="https://lilypond.org/">LilyPond</a> benutzt, aber
-            ich habe gedacht, man könnte interessantere Integrationen und Werkzeuge bauen. Das ist
-            aber ganz schwierig, weil die Sprache eigentlisch ganz schwierig zum parsen ist. Es gibt
-            ein Projekt darum, eine <code>tree-sitter</code> Grammatik zu schreiben, aber sie ist so
-            generisch, dass es eigentlich ganz schwierig ist, damit Werkzeuge zu bauen.
+            Laptop haben. Ich habe dafür <Link href="https://lilypond.org/">LilyPond</Link> benutzt,
+            aber ich habe gedacht, man könnte interessantere Integrationen und Werkzeuge bauen. Das
+            ist aber ganz schwierig, weil die Sprache eigentlisch ganz schwierig zum parsen ist. Es
+            gibt ein Projekt darum, eine <code>tree-sitter</code> Grammatik zu schreiben, aber sie
+            ist so generisch, dass es eigentlich ganz schwierig ist, damit Werkzeuge zu bauen.
           </p>
 
           <p>
@@ -162,14 +163,15 @@ function MipsCard({ lang }: { lang: SupportedLanguage }): React.ReactNode {
       return (
         <Card title="MIPS Syntax Highlighting for Vim">
           <p>
-            <a href="https://www.vim.org/scripts/script.php?script_id=2045">Link to script</a>
+            <Link href="https://www.vim.org/scripts/script.php?script_id=2045">Link to script</Link>
           </p>
 
           <p>
             Long before I switched to using Emacs, I used Vim. Back in my university days, I did a
-            bit of work with <a href="https://en.wikipedia.org/wiki/MIPS_architecture">MIPS</a> and
-            wrote some syntax highlighting support for it. I believe it&apos;s been forked by others
-            and made much better in the meantime, but it was one of my first projects.
+            bit of work with{' '}
+            <Link href="https://en.wikipedia.org/wiki/MIPS_architecture">MIPS</Link> and wrote some
+            syntax highlighting support for it. I believe it&apos;s been forked by others and made
+            much better in the meantime, but it was one of my first projects.
           </p>
         </Card>
       );
@@ -177,15 +179,17 @@ function MipsCard({ lang }: { lang: SupportedLanguage }): React.ReactNode {
       return (
         <Card title="MIPS Syntax Highlighting für Vim">
           <p>
-            <a href="https://www.vim.org/scripts/script.php?script_id=2045">Link zum Script</a>
+            <Link href="https://www.vim.org/scripts/script.php?script_id=2045">
+              Link zum Script
+            </Link>
           </p>
 
           <p>
             Lang bevor ich mit Emacs angefangen habe, habe ich Vim benutzt. Damals, als ich in der
             Uni war, habe ich ein bisschen mit{' '}
-            <a href="https://de.wikipedia.org/wiki/MIPS-Architektur">MIPS</a> gearbeitet und habe
-            ein Syntax-Highlighting dafür geschrieben. Inzwischen, soweit ich weiß, haben andere
-            Leute es weiterentwickelt, aber es war eins meiner ersten Projekte.
+            <Link href="https://de.wikipedia.org/wiki/MIPS-Architektur">MIPS</Link> gearbeitet und
+            habe ein Syntax-Highlighting dafür geschrieben. Inzwischen, soweit ich weiß, haben
+            andere Leute es weiterentwickelt, aber es war eins meiner ersten Projekte.
           </p>
         </Card>
       );

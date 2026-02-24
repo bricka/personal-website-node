@@ -1,7 +1,7 @@
 'use client';
 
 import { SupportedLanguage } from '@/app/supportedLanguage';
-import Link from 'next/link';
+import { Link } from '@/components/Link';
 import { usePathname } from 'next/navigation';
 
 function NavButton({ title, href }: { title: string; href: string }) {
