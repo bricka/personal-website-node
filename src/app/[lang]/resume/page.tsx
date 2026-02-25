@@ -1,7 +1,7 @@
 import { SupportedLanguage } from '@/app/supportedLanguage';
+import { Link } from '@/components/Link';
 import { staticLangs } from '@/utils/staticLangs';
 import { Metadata } from 'next';
-import Link from 'next/link';
 
 export async function generateStaticParams() {
   return staticLangs();
