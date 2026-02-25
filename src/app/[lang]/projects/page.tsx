@@ -1,28 +1,17 @@
 import { SupportedLanguage } from '@/app/supportedLanguage';
 import { Link } from '@/components/Link';
 import { Card } from '@/components/Card';
+import { pickTitleByLanguage } from '@/utils/i18nComponents';
 import { staticLangs } from '@/utils/staticLangs';
-import { Metadata } from 'next';
 
 export async function generateStaticParams() {
   return staticLangs();
 }
 
-const titleByLanguage = {
+export const generateMetadata = pickTitleByLanguage({
   en: 'Alex Figl-Brick: Projects',
   de: 'Alex Figl-Brick: Projekte',
-};
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: SupportedLanguage }>;
-}): Promise<Metadata> {
-  const { lang } = await params;
-  return {
-    title: titleByLanguage[lang],
-  };
-}
+});
 
 export default async function ProjectsPage(props: PageProps<'/[lang]/projects'>) {
   const { lang: langStr } = await props.params;
