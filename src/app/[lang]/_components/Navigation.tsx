@@ -19,11 +19,13 @@ const navTitles = {
     home: 'Home',
     resume: 'Resume',
     projects: 'Projects',
+    dance: 'Dance',
   },
   de: {
     home: 'Home',
     resume: 'Lebenslauf',
     projects: 'Projekte',
+    dance: 'Tanz',
   },
 };
 
@@ -35,6 +37,7 @@ export function Navigation({ lang }: { lang: SupportedLanguage }) {
       <NavButton title={navTitles[lang].home} href={hrefWithLang('')} />
       <NavButton title={navTitles[lang].resume} href={hrefWithLang('/resume')} />
       <NavButton title={navTitles[lang].projects} href={hrefWithLang('/projects')} />
+      <NavButton title={navTitles[lang].dance} href={hrefWithLang('/dance')} />
     </div>
   );
 }
