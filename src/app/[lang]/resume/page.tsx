@@ -25,7 +25,7 @@ function ResumePageEn() {
   return (
     <>
       <p>
-        <Link href="/resume.pdf">View My Resume</Link>
+        <Link href="/public/resume.pdf">View My Resume</Link>
       </p>
       <p>
         You may also see{' '}
@@ -40,7 +40,7 @@ function ResumePageDe() {
   return (
     <>
       <p>
-        <Link href="/resume.pdf">Mein Lebenslauf ansehen</Link>
+        <Link href="/public/resume.pdf">Mein Lebenslauf ansehen</Link>
       </p>
       <p>
         Vielleicht willst du auch{' '}

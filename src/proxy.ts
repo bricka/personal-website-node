@@ -4,12 +4,12 @@ import Negotiator from 'negotiator';
 const supportedLanguages = ['en', 'de'];
 
 function isInternalPath(path: string): boolean {
-  return path == 'favicon.ico' || path.startsWith('/_next');
+  return path == '/favicon.ico' || path.startsWith('/_next');
 }
 
 export function proxy(request: NextRequest) {
   const requestedPath = request.nextUrl.pathname;
-  if (isInternalPath(requestedPath)) {
+  if (requestedPath.startsWith('/public') || isInternalPath(requestedPath)) {
     return;
   }
 
